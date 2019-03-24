@@ -17,11 +17,13 @@ title: Abraks
 email: dbalkanski@abv.bg
 description: This is site about dancing
 destination: docs
-baseurl: "/AbraksDanceClub" # the subpath of your site, e.g. /blog
+baseurl: ""
+# baseurl: "/AbraksDanceClub"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ceappie
 github_username:  ceappie
 
+exclude: [_assets, node_modules, Gemfile, Gemfile.lock, gulpfile.js, package.json, package-lock.json, README.md]
 # Build settings
 markdown: kramdown
 plugins:

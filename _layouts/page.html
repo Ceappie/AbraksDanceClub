@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/styles.css">
   </head>
   <body>
-    <nav>
-      <a href="{{ site.baseurl }}/">Начало</a>
-      <a href="{{ site.baseurl }}/contacts/">Контакти</a>
-    </nav>
-    <h1>{{ page.title }}</h1>
-    <section>
+    <header class="site-header">
+      <h1><a href="/">{{ site.title }}</a></h1>
+
+      {% include navigation.html %}
+      
+    </header>
+
+    <main class="site-content">
       {{ content }}
-    </section>
-    <footer>
+    </main>
+    
+    <footer class="site-footer">
       &copy; Abraks 2019
     </footer>
   </body>
