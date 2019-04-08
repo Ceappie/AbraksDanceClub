@@ -1,0 +1,14 @@
+:root {
+    --base-padding: 2rem;
+    --article-h1-brdrd: 0.5em; 
+
+    --base-text-color: #FFFFFF;
+    --base-color-brd-hover: #00FFFF; 
+    --base-color-brd-focus: #F30808;
+
+    --base-inp-padleft: 0.3rem;
+    --base-brdrd-pad: 0.3em;
+
+    --basic-animation-duration: 1s;
+    --basic-animation-delay: 0.3s;
+}

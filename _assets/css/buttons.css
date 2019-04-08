@@ -4,10 +4,10 @@ input[type="submit"],
     display: inline-block;
     padding: 0.5em 1em;
     background: #369;
-    color: #FFF;
+    color: var(--base-text-color);
     border: none;
     text-decoration: none;
-    border-radius: 0.3em;
+    border-radius: var(--base-brdrd-pad);
 }
 
 button:hover,

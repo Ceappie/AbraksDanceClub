@@ -125,7 +125,9 @@
     }
 } */
 
-/* HEADER TOP MENU */
+/* 
+ * HEADER TOP MENU
+ */
 
 .header-top-menu {
     display: flex;
@@ -139,7 +141,7 @@
 }
 
 .header-top-menu i {
-    color: #FFF;
+    color: var(--base-text-color);
     padding-right: 0.2rem;
 }
 
@@ -149,10 +151,6 @@
 
 .header-top-menu ul li {
     padding-right: 1.5rem;
-}
-
-.header-top-menu ul li a {
-    color: #FFF;
 }
 
 .header-top-menu ul li a:hover {
@@ -177,13 +175,90 @@
     left: 26px;
 }
 
-/* HEADER MAIN NAVIGATION */
+/*
+ * HEADER TOP MENU - ANIMATION RIGHT
+ */
+
+.header-top-menu ul li:nth-child(1) {
+    position: relative;
+    opacity: 0;
+    -webkit-animation-name: list-animation-left;
+            animation-name: list-animation-left;
+    -webkit-animation-duration: var(--basic-animation-duration);
+            animation-duration: var(--basic-animation-duration);
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.header-top-menu ul li:nth-child(2) {
+    position: relative;
+    opacity: 0;
+    -webkit-animation-name: list-animation-left;
+            animation-name: list-animation-left;
+    -webkit-animation-duration: var(--basic-animation-duration);
+            animation-duration: var(--basic-animation-duration);
+    -webkit-animation-delay: var(--basic-animation-delay);
+            animation-delay: var(--basic-animation-delay);
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.header-top-menu ul li:nth-child(3) {
+    position: relative;
+    opacity: 0;
+    -webkit-animation-name: list-animation-left;
+            animation-name: list-animation-left;
+    -webkit-animation-duration: var(--basic-animation-duration);
+            animation-duration: var(--basic-animation-duration);
+    -webkit-animation-delay: calc(var(--basic-animation-delay) * 2);
+            animation-delay: calc(var(--basic-animation-delay) * 2);
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.header-top-menu ul li:nth-child(4) {
+    position: relative;
+    opacity: 0;
+    -webkit-animation-name: list-animation-left;
+            animation-name: list-animation-left;
+    -webkit-animation-duration: var(--basic-animation-duration);
+            animation-duration: var(--basic-animation-duration);
+    -webkit-animation-delay: calc(var(--basic-animation-delay) * 3);
+            animation-delay: calc(var(--basic-animation-delay) * 3);
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.header-top-menu .search {
+    position: relative;
+    opacity: 0;
+    -webkit-animation-name: list-animation-left;
+            animation-name: list-animation-left;
+    -webkit-animation-duration: var(--basic-animation-duration);
+            animation-duration: var(--basic-animation-duration);
+    -webkit-animation-delay: calc(var(--basic-animation-delay) * 4);
+            animation-delay: calc(var(--basic-animation-delay) * 4);
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@media (max-width: 1270px) {
+    .header-top-menu ul li {
+        font-size: 12px;
+    }
+}
+
+/*
+
+ * HEADER MAIN NAVIGATION 
+
+ */
 
 .navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #FFF;
+    background: var(--base-text-color);
 }
 
 .main-nav ul {
@@ -191,10 +266,115 @@
 }
 
 .main-nav ul li {
+    background: #CCC;
     padding: 1rem;
+    margin-right: 0.3rem;
+    border-radius: var(--base-brdrd-pad);
+}
+
+.main-nav ul li:hover {
+    background: #999;
 }
 
 .main-nav ul li a{
     font-size: 1.3em;
     color: #4D5CF7;
+}
+
+/*
+ * HEADER MAIN NAVIGATION - ANIMATION LEFT
+ */
+
+.main-nav ul li:nth-child(1) {
+    position: relative;
+    opacity: 0;
+    -webkit-animation-name: list-animation-right;
+            animation-name: list-animation-right;
+    -webkit-animation-duration: var(--basic-animation-duration);
+            animation-duration: var(--basic-animation-duration);
+    -webkit-animation-delay: calc(var(--basic-animation-delay) * 3);
+            animation-delay: calc(var(--basic-animation-delay) * 3);
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.main-nav ul li:nth-child(2) {
+    position: relative;
+    opacity: 0;
+    -webkit-animation-name: list-animation-right;
+            animation-name: list-animation-right;
+    -webkit-animation-duration: var(--basic-animation-duration);
+            animation-duration: var(--basic-animation-duration);
+    -webkit-animation-delay: calc(var(--basic-animation-delay) * 2);
+            animation-delay: calc(var(--basic-animation-delay) * 2);
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.main-nav ul li:nth-child(3) {
+    position: relative;
+    opacity: 0;
+    -webkit-animation-name: list-animation-right;
+            animation-name: list-animation-right;
+    -webkit-animation-duration: var(--basic-animation-duration);
+            animation-duration: var(--basic-animation-duration);
+    -webkit-animation-delay: calc(var(--basic-animation-delay));
+            animation-delay: calc(var(--basic-animation-delay));
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.main-nav ul li:nth-child(4) {
+    position: relative;
+    opacity: 0;
+    -webkit-animation-name: list-animation-right;
+            animation-name: list-animation-right;
+    -webkit-animation-duration: var(--basic-animation-duration);
+            animation-duration: var(--basic-animation-duration);
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes list-animation-right {
+    0% {
+        left: -5rem;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes list-animation-right {
+    0% {
+        left: -5rem;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes list-animation-left {
+    0% {
+        left: 5rem;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes list-animation-left {
+    0% {
+        left: 5rem;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
 }

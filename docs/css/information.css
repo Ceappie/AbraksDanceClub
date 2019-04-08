@@ -1,22 +1,10 @@
 .contacts {
     background-image: linear-gradient(to right top, #16046c, #1c048f, #2304b3, #2903d8, #2f00ff);
-    padding: 2rem;
 }
 
-.contacts header {
+article header {
     display: flex;
     justify-content: center;
-}
-
-.contacts header h1 {
-    display: block;
-    background: rgba(0, 0,  0, 0.6);
-    color: #FFF;
-    text-align: center;
-    letter-spacing: 0.8rem;
-    padding: 2rem;
-    border-radius: 0.5em;
-    /* overflow: hidden; */
 }
 
 .contacts section {
@@ -27,7 +15,7 @@
         "tel tel fac . map"
         "msg msg msg . map"
         "msg msg msg . map";
-    color: #FFF;
+    color: var(--base-text-color);
     width: 100%;
 }
 
@@ -55,12 +43,8 @@
     grid-area: msg;
 }
 
-.contacts section p a {
-    color: #FFF;
-}
-
 .contacts section p a:hover {
-    color: #00FFFF;
+    color: var(--base-color-brd-hover);
 }
 
 .contacts section p:nth-child(3),
@@ -84,32 +68,39 @@
 .contacts section .message input,
 .contacts section .message textarea {
     border: 2px solid #000;
-    border-radius: 0.3em;
+    border-radius: var(--base-brdrd-pad);
 }
 
 .contacts section .message input {
     width: 80%;
-    padding: 0.2rem 0 0.2rem 0.3rem;
-    border: 2px solid #000;
-    border-radius: 0.3em;
+    padding: 0.2rem 0 0.2rem var(--base-inp-padleft);
+    border-radius: var(--base-brdrd-pad);
 }
 
 .contacts section .message textarea {
-    padding-left: 0.3rem;
+    padding-left: var(--base-inp-padleft);
     width: 45%;
     height: auto;
 }
 
 .contacts section .message input:hover,
 .contacts section .message textarea:hover {
-    border: 2px solid #00FFFF;
+    border: 2px solid var(--base-color-brd-hover);
 }
 
 .contacts section .message input:focus,
 .contacts section .message textarea:focus {
-    border: 2px solid #F30808;
+    border: 2px solid var(--base-color-brd-focus);
 }
 
 .contacts section .message button {
-   padding: 0.4rem 2rem;
+   padding: 0.4rem var(--base-padding);
+}
+
+
+/* ABOUT US */
+
+
+.about section p {
+    text-align: center;
 }
