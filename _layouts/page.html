@@ -3,14 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/site.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
   <body>
     <header class="site-header">
-      <h1><a href="/">{{ site.title }}</a></h1>
+      <div>
+        {% include header-top.html %}
+      </div>
 
-      {% include navigation.html %}
-      
+      <div class="navigation">
+        <a href="/"><img src="../images/logo.jpg"></a>
+        {% include navigation.html %}
+      </div>
     </header>
 
     <main class="site-content">

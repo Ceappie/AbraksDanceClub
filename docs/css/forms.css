@@ -1,0 +1,87 @@
+fieldset {
+    border: 2px solid #CCC;
+    padding: 1.5em 2em;
+}
+
+fieldset + fieldset {
+    margin-top: 2em;
+}
+
+fieldset p {
+    padding-bottom: 1em;
+}
+
+p.submit {
+    padding-top: 0.5em;
+    margin-top: 2em;
+}
+
+legend {
+    padding: 0 0.5em;
+    font-weight: bold;
+    font-style: 1.2em;
+}
+
+select,
+input {
+    display: block;
+    width: 20%;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select:focus,
+input:focus {
+    border-color: #47A;
+}
+
+select {
+    background: url('chevron-down-solid.svg') 99% center no-repeat;
+    background-size: 0.8em auto;
+}
+
+input[type="submit"] {
+    width: auto;
+    border: 2px solid #CCC;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    background: #369;
+    color: #FFF;
+    border-color: #258;
+    cursor: pointer;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    position: relative;
+}
+
+.input-wrapper i {
+    display: flex;
+    align-items: center;
+    border: 2px solid #CCC;
+    background-origin: 0.3em;
+    background: #FFF;
+    position: absolute;
+    top: 0; right: 0; left: 0; bottom: 0;
+    z-index: -1;
+}
+
+.input-wrapper i::before {
+    padding: 0 0.4em;
+}
+
+.input-wrapper input {
+    order: 2;
+    margin-left: 1em;
+}
+
+input:focus + i {
+    color: #47A;
+    border-color: #47A;
+}

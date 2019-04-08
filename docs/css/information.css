@@ -1,0 +1,115 @@
+.contacts {
+    background-image: linear-gradient(to right top, #16046c, #1c048f, #2304b3, #2903d8, #2f00ff);
+    padding: 2rem;
+}
+
+.contacts header {
+    display: flex;
+    justify-content: center;
+}
+
+.contacts header h1 {
+    display: block;
+    background: rgba(0, 0,  0, 0.6);
+    color: #FFF;
+    text-align: center;
+    letter-spacing: 0.8rem;
+    padding: 2rem;
+    border-radius: 0.5em;
+    /* overflow: hidden; */
+}
+
+.contacts section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "adr adr evp . map"
+        "tel tel fac . map"
+        "msg msg msg . map"
+        "msg msg msg . map";
+    color: #FFF;
+    width: 100%;
+}
+
+.contacts section .address{
+    grid-area: adr;
+}
+
+.contacts section .email{
+    grid-area: evp;
+}
+
+.contacts section .telephone{
+    grid-area: tel;
+}
+
+.contacts section .social{
+    grid-area: fac;
+}
+
+.contacts section iframe{
+    grid-area: map;
+}
+
+.contacts section .message {
+    grid-area: msg;
+}
+
+.contacts section p a {
+    color: #FFF;
+}
+
+.contacts section p a:hover {
+    color: #00FFFF;
+}
+
+.contacts section p:nth-child(3),
+.contacts section p:nth-child(4) {
+    padding-bottom: 0;
+}
+
+.contacts section .message h2 {
+    text-align: center;
+    padding-right: 10rem;
+}
+
+.contacts section .message p {
+    padding-bottom: 0.5rem;
+}
+
+.contacts section .message p:nth-child(5) {
+    padding-bottom: 0;
+}
+
+.contacts section .message input,
+.contacts section .message textarea {
+    border: 2px solid #000;
+    border-radius: 0.3em;
+}
+
+.contacts section .message input {
+    width: 80%;
+    padding: 0.2rem 0 0.2rem 0.3rem;
+    border: 2px solid #000;
+    border-radius: 0.3em;
+}
+
+.contacts section .message textarea {
+    padding-left: 0.3rem;
+    width: 45%;
+    height: auto;
+}
+
+.contacts section .message input:hover,
+.contacts section .message textarea:hover {
+    border: 2px solid #00FFFF;
+}
+
+.contacts section .message input:focus,
+.contacts section .message textarea:focus {
+    border: 2px solid #F30808;
+}
+
+.contacts section .message button {
+   padding: 0.4rem 2rem;
+}
