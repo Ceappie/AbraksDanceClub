@@ -1,0 +1,31 @@
+:root {
+    --base-padding: 2rem;
+    --article-h1-brdrd: 0.5em; 
+
+    --base-text-color: #FFFFFF;
+    --base-color-brd-hover: #00FFFF; 
+    --base-color-brd-focus: #F30808;
+
+    --base-inp-padleft: 0.3rem;
+    --base-brdrd-pad: 0.3em;
+
+    --basic-animation-duration: 1s;
+    --basic-animation-delay: 0.3s;
+}
+
+%nav-animation {
+    position: relative;
+    opacity: 0;
+    animation-duration: var(--basic-animation-duration);
+    animation-fill-mode: forwards;
+}
+
+%nav-animation-left {
+    @extend %nav-animation;
+    animation-name: list-animation-left;
+}
+
+%nav-animation-right {
+    @extend %nav-animation;
+    animation-name: list-animation-right;
+}

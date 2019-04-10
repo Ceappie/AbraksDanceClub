@@ -1,0 +1,25 @@
+/*
+ * MENU AND NAVIGATION TOP ANIMATIONS
+ */
+
+@keyframes list-animation-right {
+    0% {
+        left: -5rem;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes list-animation-left {
+    0% {
+        left: 5rem;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}

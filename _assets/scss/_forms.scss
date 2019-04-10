@@ -7,8 +7,11 @@ fieldset + fieldset {
     margin-top: 2em;
 }
 
-fieldset p {
-    padding-bottom: 1em;
+fieldset {
+
+    p {
+        padding-bottom: 1em;
+    }
 }
 
 p.submit {
@@ -61,24 +64,31 @@ input[type="submit"] {
     position: relative;
 }
 
-.input-wrapper i {
-    display: flex;
-    align-items: center;
-    border: 2px solid #CCC;
-    background-origin: 0.3em;
-    background: #FFF;
-    position: absolute;
-    top: 0; right: 0; left: 0; bottom: 0;
-    z-index: -1;
+.input-wrapper {
+
+    i {
+        display: flex;
+        align-items: center;
+        border: 2px solid #CCC;
+        background-origin: 0.3em;
+        background: #FFF;
+        position: absolute;
+        top: 0; right: 0; left: 0; bottom: 0;
+        z-index: -1;
+    }
 }
 
-.input-wrapper i::before {
-    padding: 0 0.4em;
+.input-wrapper {
+    i::before {
+        padding: 0 0.4em;
+    }
 }
 
-.input-wrapper input {
-    order: 2;
-    margin-left: 1em;
+.input-wrapper {
+    input {
+        order: 2;
+        margin-left: 1em;
+    }
 }
 
 input:focus + i {

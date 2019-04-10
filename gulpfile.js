@@ -3,12 +3,14 @@
 let gulp = require("gulp"),
 	autoprefixer = require("gulp-autoprefixer"),
 	exec = require("gulp-exec"),
-	browserSync = require('browser-sync').create(),
+	browserSync = require("browser-sync").create(),
+	sass = require("gulp-sass"),
 	cp = require("child_process");
 ;
 
-gulp.task("css", function() {
-	return gulp.src( '_assets/css/**/*.css' )
+gulp.task("scss", function() {
+	return gulp.src( '_assets/scss/**/*.scss' )
+		.pipe( sass().on('error', sass.logError) )
 		.pipe( autoprefixer() )
 		.pipe( gulp.dest( './docs/css/' ) )
 		.pipe(browserSync.stream({ match: '**/*.css' }))
@@ -16,7 +18,7 @@ gulp.task("css", function() {
 });
 
 gulp.task("jekyll", function() {
-	return cp.spawn("jekyll.bat", ["build"], { stdio: "inherit" });
+	return cp.spawn("jekyll.bat", ["build"], { stdio: "inherit", shell: true });
 });
 
 gulp.task("watch", function() {
@@ -27,7 +29,7 @@ gulp.task("watch", function() {
 		}
 	});
 
-	gulp.watch('_assets/css/**/*.css', gulp.series('css'));
+	gulp.watch('_assets/scss/**/*.scss', gulp.series('scss'));
 
 	gulp.watch(
 		[
@@ -36,10 +38,10 @@ gulp.task("watch", function() {
 			"./_layouts/*.html",
 			"./_posts/**/*.*"
 		]
-	).on('change', gulp.series('jekyll', 'css'));
+	).on('change', gulp.series('jekyll', 'scss'));
 
 	gulp.watch( 'docs/**/*.html' ).on('change', browserSync.reload );
 	gulp.watch( 'docs/**/*.js' ).on('change', browserSync.reload );
 });
 
-gulp.task("default", gulp.series("css", "jekyll", "watch"));
+gulp.task("default", gulp.series("jekyll", "scss", "watch"));

@@ -1,0 +1,7 @@
+$nav-animation-left: (
+    'position': relative,
+    'opacity': 0,
+    'animation-name': list-animation-left,
+    'animation-duration': var(--basic-animation-duration),
+    'animation-fill-mode': forwards
+)
