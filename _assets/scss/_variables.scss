@@ -19,8 +19,8 @@
     --base-inp-padleft: 0.3rem;
     --base-brdrd-pad: 0.3em;
 
-    --basic-animation-duration: 1s;
-    --basic-animation-delay: 0.3s;
+    --basic-animation-duration: 0.6s;
+    --basic-animation-delay: 0.2s;
 }
 
 %nav-animation {
@@ -45,5 +45,3 @@
     animation-fill-mode: forwards;
     animation-name: list-animation-right;
 }
-
-$baseurl: "{{ site.baseurl }}";

@@ -106,9 +106,10 @@
     }
 }
 
-@media (max-width: 1270px) {
-    .header-top-menu ul li {
-        font-size: 12px;
+@include rp('tablet') {
+
+    .header-top-menu ul li a span {
+        display: none;
     }
 }
 
@@ -117,15 +118,6 @@
  * HEADER MAIN NAVIGATION 
 
  */
-
-.navigation {
-    display: flex;
-    background: green;
-    width: 100%;
-    margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .main-nav {
     margin: auto;
@@ -140,13 +132,43 @@
     & > ul {
         display: flex;
         align-items: center;
-        margin: 1rem 0;
         opacity: 0.8;
+
+        @include rp('tablet') {
+            flex-direction: column;
+            align-items: flex-start;
+
+            li {
+                padding-left: 2rem;
+                text-align: left;
+                align-items: flex-start;
+            }
+
+            .main-nav > ul > li{
+                text-align: center;
+            }
+
+            .li-logo {
+                display: none;
+            }
+
+            .child-page li {
+                display: block;
+                padding-left: 1.5rem;
+            }
+
+            .chevron::after {
+                display: none;
+            }
+        }
 
         li {
             padding-right: 1rem;
             margin-right: 0.3rem;
-            // border-radius: var(--base-brdrd-pad);
+
+            @include rp('laptop') {
+                padding: 0 0.5rem;
+            }
 
             a{
                 font-size: 1.3em;
@@ -159,74 +181,73 @@
         }
         
         a:hover {
-            // background: #999;
             color: aqua;
         }
     }
 
+    @include rp('laptop') {
 
+        & > ul > li > ul {
+            opacity: 0;
+            transform: translateY(-2rem);
+            padding-top: 0.5em;
+        }
 
-    & > ul > li > ul {
-        opacity: 0;
-        transform: translateY(-2rem);
-        padding-top: 0.5em;
+        & > ul ul {
+            display: block;
+            position: absolute;
+            background: rgba(0, 128, 0, 0.8);
+            z-index: 100;
+            pointer-events: none;
+            border-bottom-left-radius: 0.3em;
+            border-bottom-right-radius: 0.3em;
+            overflow: hidden;
+        }
+        
+        & > ul ul li {
+            padding: 1em 2.5em 1em 1rem;
+            margin-right: 1rem;
+        }
+
+        li:hover > ul {
+            pointer-events: all;
+        }
+        
+        & > ul > li:hover > ul {
+            transform: translateX(-1rem);
+            opacity: 1;
+        }
     }
 
-    & > ul ul {
-        display: block;
-        position: absolute;
-        background: rgba(0, 128, 0, 0.8);
-        z-index: 100;
-        pointer-events: none;
-        border-bottom-left-radius: 0.3em;
-        border-bottom-right-radius: 0.3em;
-        overflow: hidden;
-    }
-    
-    & > ul ul li {
-        padding: 1em 2.5em 1em 1rem;
-        margin-right: 1rem;
+    @include rp('tablet') {
+        width: 100%;
+
+        @at-root #toggle-main-nav + .site-header & {
+            display: none;
+        }
+
+        @at-root #toggle-main-nav:checked + .site-header & {
+            display: block;
+        }
+}
 }
 
-    li:hover > ul {
-        pointer-events: all;
-    }
-    
-    & > ul > li:hover > ul {
-        transform: translateX(-1rem);
-        opacity: 1;
-    }
+#toggle-main-nav-button {
+    color: #FFF;
+    float: right;
 
-    
+    @include rp('tablet') { display: block; }
+    @include rp('laptop') { display: none; }
 }
 
-// .bgtext {
-//    position: relative;
-// }
-
-// .bgtext:after {
-//     font-family: 'Pacifico', cursive;
-//     font-size: 550%;
-//     // letter-spacing: 0.2rem;
-//     opacity: 0.7;
-//     text-align: center;
-//     background: green;
-//     width: 100%;
-//     content: " ТАНЦОВ КЛУБ АБРАКС";
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     z-index: -1;
-//     padding: 1rem;
-// }
-
-.logo {
-    background: transparent;
-    opacity: 1;
+#toggle-main-nav {
+    position: absolute;
+    opacity: 0; 
+    pointer-events: none;
 }
 
 /*
- * HEADER MAIN NAVIGATION - ANIMATION LEFT
+ * HEADER MAIN NAVIGATION - ANIMATION
  */
 
 
@@ -251,6 +272,25 @@
 
         li:nth-child(4) {
             @extend %nav-animation-right;
+        }
+
+        li:nth-child(6) {
+            @extend %nav-animation-left;
+        }
+        
+        li:nth-child(7) {
+            @extend %nav-animation-left;
+            animation-delay: calc(var(--basic-animation-delay) * 1);
+        }
+        
+        li:nth-child(8) {
+            @extend %nav-animation-left;
+            animation-delay: calc(var(--basic-animation-delay) * 2);
+        }
+        
+        li:nth-child(9) {
+            @extend %nav-animation-left;
+            animation-delay: calc(var(--basic-animation-delay) * 3);
         }
     }
 }

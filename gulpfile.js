@@ -5,11 +5,13 @@ let gulp = require("gulp"),
 	exec = require("gulp-exec"),
 	browserSync = require("browser-sync").create(),
 	sass = require("gulp-sass"),
+	wait = require('gulp-wait'),
 	cp = require("child_process");
 ;
 
 gulp.task("scss", function() {
 	return gulp.src( '_assets/scss/**/*.scss' )
+		.pipe( wait(1500) )
 		.pipe( sass().on('error', sass.logError) )
 		.pipe( autoprefixer() )
 		.pipe( gulp.dest( './docs/css/' ) )

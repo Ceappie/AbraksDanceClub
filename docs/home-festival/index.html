@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
   <body>
+    <input type="checkbox" id="toggle-main-nav">
     <header class="site-header">
       <div>
         <section class="header-top-menu">
@@ -39,9 +40,9 @@
 </section>
       </div>
       
-      <div class="bgtext"></div>
       <div class="navigation">
-        <nav class="main-nav">
+        <label id="toggle-main-nav-button" for="toggle-main-nav"><i class="fa fa-bars"></i></label>
+<nav class="main-nav">
     <ul>
         
         
@@ -119,7 +120,7 @@
             <span class="title">Зали</span>
             </a>
             
-            <ul>
+            <ul class="child-page">
                 <li>
                     <a href="/AbraksDanceClub/dh-dupnica.html">
                         <span class="title">Дупница</span>
@@ -150,7 +151,7 @@
             <span class="title">Галерия</span>
             </a>
             
-            <ul>
+            <ul class="child-page">
                 <li>
                     <a href="/AbraksDanceClub/gallery-hora.html">
                         <span class="title">Български танци</span>
@@ -202,7 +203,11 @@
     </header>
 
     <main class="site-content">
-      
+      <article class="home-festival">
+    <header>
+        <h2>На Гергьовденски люлки</h2>
+    </header>
+</article>
     </main>
     
     <footer class="site-footer">

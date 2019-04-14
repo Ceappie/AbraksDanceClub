@@ -1,3 +1,4 @@
+<label id="toggle-main-nav-button" for="toggle-main-nav"><i class="fa fa-bars"></i></label>
 <nav class="main-nav">
     <ul>
         {% assign sorted_pages = site.pages | sort:"order" %}
@@ -31,7 +32,7 @@
                 </li>
             </ul>
             {% elsif item.url == '/dance-halls/' %}
-            <ul>
+            <ul class="child-page">
                 <li>
                     <a href="{{ site.baseurl }}/dh-dupnica.html">
                         <span class="title">Дупница</span>
@@ -44,7 +45,7 @@
                 </li>
             </ul>
             {% elsif item.url == '/gallery/' %}
-            <ul>
+            <ul class="child-page">
                 <li>
                     <a href="{{ site.baseurl }}/gallery-hora.html">
                         <span class="title">Български танци</span>

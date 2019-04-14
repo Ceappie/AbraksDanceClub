@@ -96,6 +96,25 @@
                 padding: 0.4rem var(--base-padding);
             }
         }
+
+        @include rp('tablet') {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas: 
+            "adr"
+            "tel"
+            "evp"
+            "fac"
+            "msg"
+            "map";
+
+            p.telephone {
+                padding-bottom: 0.5rem;
+            }
+
+            .message {
+                padding: 1rem;
+            }
+        }
     }
 }
 

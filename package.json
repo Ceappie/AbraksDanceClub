@@ -18,6 +18,7 @@
     "gulp-autoprefixer": "^6.0.0",
     "gulp-exec": "^3.0.2",
     "gulp-sass": "^4.0.2",
+    "gulp-wait": "0.0.2",
     "node-sass": "^4.11.0",
     "resolve-url-loader": "^3.1.0"
   },
