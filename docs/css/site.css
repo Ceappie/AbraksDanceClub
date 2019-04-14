@@ -380,7 +380,7 @@ article header {
 
 #toggle-main-nav-button {
   color: #FFF;
-  float: right; }
+  padding: 2rem; }
   @media (max-width: 990px) {
     #toggle-main-nav-button {
       display: block; } }
@@ -628,7 +628,7 @@ ul.galery img {
 
 /* HOME PAGE */
 .main-page {
-  background: url("/AbraksDanceClub/images/bg-home.jpg") no-repeat center center;
+  background: url("/AbraksDanceClub/images/bg-home.png") no-repeat center center;
   background-position: center 50%;
   background-size: cover; }
   .main-page section {

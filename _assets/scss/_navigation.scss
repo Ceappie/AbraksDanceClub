@@ -234,7 +234,7 @@
 
 #toggle-main-nav-button {
     color: #FFF;
-    float: right;
+    padding: 2rem;
 
     @include rp('tablet') { display: block; }
     @include rp('laptop') { display: none; }
