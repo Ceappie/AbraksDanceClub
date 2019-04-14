@@ -1,14 +1,40 @@
 <nav class="main-nav">
     <ul>
-        {% for page in site.pages %}
-        {% if page.url != '/feed.xml' and page.url != '/' %}
+        {% assign sorted_pages = site.pages | sort:"order" %}
+        {% for item in sorted_pages %}
+        {% if item.url != '/feed.xml' and item.url != '/groups/kids.html' %}
         <li>
-            <a href="{{ site.baseurl }}{{ page.url }}">
-            <span class="title">{{ page.title }}</span>
-            <span class="date">{{ page.date | date_to_string }}</span>
+            <a href="{{ site.baseurl }}{{ item.url }}">
+            <span class="title">{{ item.title }}</span>
             </a>
+            {% if item.url == '/groups/groups/' %}
+            <ul>
+                <li>
+                    <a href="/groups/kids.html">
+                        <span class="title">Деца 5г. - 14г.</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/groups/beginners.html">
+                        <span class="title">Начинаещи</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/groups/advanced.html">
+                        <span class="title">Напреднали</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/groups/ensemble.html">
+                        <span class="title">Ансамбъл</span>
+                    </a>
+                </li>
+            </ul>
+            {% endif %}
         </li>
         {% endif %}
         {% endfor %}
     </ul>
 </nav>
+
+<!-- {% if page.url == item.url %} class="current-page"{% endif %} -->

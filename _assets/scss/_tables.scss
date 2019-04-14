@@ -1,0 +1,60 @@
+.table-wrapper {
+    width: 100%;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse:collapse;
+    table-layout: fixed;
+    text-align: center;
+    width: 90%;
+
+    tr {
+
+        th {
+            background: #CCC;
+            padding: 0.5rem 0;
+        }
+
+        td {
+            padding: 1rem 0;
+        }
+    }
+
+    tr:nth-child(odd) {
+        background: #999;
+    }
+
+    h6, span {
+        padding: 0 0.5rem;
+    }
+    
+}
+
+.salsa-kids {
+    background: yellow;
+}
+
+.hora-kids {
+    background: rgb(224, 224, 3);
+}
+
+.salsa-beginners {
+    background: lime;
+}
+
+.hora-beginners {
+    background: green;
+}
+
+.salsa-advanced {
+    background: red;
+}
+
+.hora-advanced {
+    background: rgb(252, 66, 34);
+}
+
+.ensemble {
+    background: lightblue;
+}

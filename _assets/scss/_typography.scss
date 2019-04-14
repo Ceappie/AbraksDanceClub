@@ -1,42 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 /* Typography Global Styles */
 
 html {
-    font-size: 12px;
+    font-size: var(--base-fz-mobile);
     line-height: 1.5;
     font-family: "PT Serif", Georgia, Tahoma, serif;
 }
 
 @media (min-width: 600px) {
-    html { font-size: 14px; }
+    html { font-size: var(--base-fz-tablet); }
 }
 
-@media (min-width: 1024px) {
-    html { font-size: 16px; }
+@media (min-width: 1260px) {
+    html { font-size: var(--base-fz-laptop); }
 }
 
-@media (min-width: 1440px) {
-    html { font-size: 18px; }
+@media (min-width: 1420px) {
+    html { font-size: var(--base-fz-desktop); }
 }
 
-@media (min-width: 1920px) {
-    html { font-size: 21px; }
+@media (min-width: 1660px) {
+    html { font-size: var(--base-fz-tv); }
 }
 
 p {
     padding-bottom: 1em;
 }
 
-body, p, table, form, input, select, textarea, button {
+body, p, table, form, input, select, textarea, button, a, i, span {
     font: inherit;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     line-height: 1.1;
-    margin: 0 0 0.5em 0;
+    margin: 0 0 calc( var(--sizing-ws-base) / 3 ) 0;
     padding: 0;
+}
+
+h6 {
+    padding-bottom: 0.5rem;
 }
 
 h1 { font-size: 2.6rem }
@@ -53,7 +58,7 @@ h6 { font-size: 1.2rem }
 }
 
 li {
-    list-style: none;
+    list-style: none outside;
 }
 
 a {
