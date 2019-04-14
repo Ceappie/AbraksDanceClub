@@ -229,15 +229,29 @@
         @at-root #toggle-main-nav:checked + .site-header & {
             display: block;
         }
+    }
 }
+
+.home-btn,
+#toggle-main-nav-button {
+    @include rp('tablet') { display: block; }
+    @include rp('laptop') { display: none; }
 }
 
 #toggle-main-nav-button {
+    font-size: 200%;
     color: #FFF;
-    padding: 2rem;
+    padding: 0.5rem;
+}
 
-    @include rp('tablet') { display: block; }
-    @include rp('laptop') { display: none; }
+.home-btn {
+    position: absolute;
+    right: 0;
+
+    img {
+        width: 60%;
+        height: auto;
+    }
 }
 
 #toggle-main-nav {

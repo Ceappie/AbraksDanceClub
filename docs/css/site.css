@@ -378,15 +378,27 @@ article header {
       #toggle-main-nav:checked + .site-header .main-nav {
         display: block; } }
 
+@media (max-width: 990px) {
+  .home-btn,
+  #toggle-main-nav-button {
+    display: block; } }
+
+@media (min-width: 991px) {
+  .home-btn,
+  #toggle-main-nav-button {
+    display: none; } }
+
 #toggle-main-nav-button {
+  font-size: 200%;
   color: #FFF;
-  padding: 2rem; }
-  @media (max-width: 990px) {
-    #toggle-main-nav-button {
-      display: block; } }
-  @media (min-width: 991px) {
-    #toggle-main-nav-button {
-      display: none; } }
+  padding: 0.5rem; }
+
+.home-btn {
+  position: absolute;
+  right: 0; }
+  .home-btn img {
+    width: 60%;
+    height: auto; }
 
 #toggle-main-nav {
   position: absolute;
@@ -620,7 +632,10 @@ ul.galery img {
         .contacts section p.telephone {
           padding-bottom: 0.5rem; }
         .contacts section .message {
-          padding: 1rem; } }
+          padding: 1rem; }
+        .contacts section iframe {
+          width: 200px;
+          height: 300px; } }
 
 /* ABOUT US */
 .about section p {
