@@ -1,8 +1,6 @@
 .contacts {
-    background-image: linear-gradient(to right top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);;
-}
+    background-image: linear-gradient(to right top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
 
-.contacts {
     section {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -13,12 +11,6 @@
             "msg msg msg . map";
         color: var(--base-text-color);
         width: 100%;
-    }
-}
-
-.contacts {
-
-    section {
 
         .address{
             grid-area: adr;
@@ -102,7 +94,7 @@
 
             button {
                 padding: 0.4rem var(--base-padding);
-             }
+            }
         }
     }
 }
@@ -112,4 +104,37 @@
 
 .about section p {
     text-align: center;
+}
+
+
+/* HOME PAGE */
+
+.main-page {
+    background: url('/AbraksDanceClub/images/bg-home.jpg') no-repeat center center;
+    background-position: center 50%;
+    background-size: cover;
+
+    section {
+        font-size: 300%;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.4);
+        color: green;
+        border-radius: 0.5em;
+        font-weight: bold;
+        
+        h4 {
+            font-size: 100%;
+            padding: 2rem;
+            font-weight: bold;
+        }
+
+        p {
+            line-height: 1;
+            display: block;
+        }
+
+        p:nth-child(6) {
+            padding-bottom: 0;
+        }
+    }
 }

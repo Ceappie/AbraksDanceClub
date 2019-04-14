@@ -23,6 +23,30 @@
         li {
             padding-right: 1.5rem;
 
+            .ht-map::before {
+                font-family: "Font Awesome 5 Free";
+                content: '\f3c5';
+                font-weight: 900;
+            }
+
+            .ht-mobile::before {
+                font-family: "Font Awesome 5 Free";
+                content: '\f3cd';
+                font-weight: 900;
+            }
+
+            .ht-mail::before {
+                font-family: "Font Awesome 5 Free";
+                content: '\f0e0';
+                font-weight: 900;
+            }
+
+            .ht-facebook::before {
+                font-family: "Font Awesome 5 Brands";
+                content: '\f09a';
+                font-weight: 700;
+            }
+
             a:hover {
                 color: yellow;
             }
@@ -34,9 +58,17 @@
         padding-left: 2rem;
 
         input {
-            padding-left: 1.5rem;
+            padding-left: 0.4rem;
             width: 80%;
         }
+    }
+
+    .search::before {
+        font-family: "Font Awesome 5 Free";
+        content: '\f002';
+        font-weight: 900;
+        color: #FFF;
+        padding-right: 0.4rem;
     }
 }
 
@@ -88,6 +120,7 @@
 
 .navigation {
     display: flex;
+    background: green;
     width: 100%;
     margin: 0 auto;
     justify-content: space-between;
@@ -97,17 +130,23 @@
 .main-nav {
     margin: auto;
 
-    ul {
+    .chevron::after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f078';
+        font-weight: 900;
+        color: #FFF;
+    }
+
+    & > ul {
         display: flex;
         align-items: center;
         margin: 1rem 0;
         opacity: 0.8;
 
         li {
-            background: rgba(0,0,0,0.3);
-            padding: 1rem;
+            padding-right: 1rem;
             margin-right: 0.3rem;
-            border-radius: var(--base-brdrd-pad);
+            // border-radius: var(--base-brdrd-pad);
 
             a{
                 font-size: 1.3em;
@@ -115,13 +154,19 @@
             }
         }
 
-        .current-page,
-        li:hover {
-            background: #999;
+        .li-logo {
+            border-radius: 50%;
+        }
+        
+        a:hover {
+            // background: #999;
+            color: aqua;
         }
     }
 
-    & > ul ul li {
+
+
+    & > ul > li > ul {
         opacity: 0;
         transform: translateY(-2rem);
         padding-top: 0.5em;
@@ -130,46 +175,50 @@
     & > ul ul {
         display: block;
         position: absolute;
-        top: 100%;
-        left: 0;
+        background: rgba(0, 128, 0, 0.8);
         z-index: 100;
         pointer-events: none;
         border-bottom-left-radius: 0.3em;
         border-bottom-right-radius: 0.3em;
         overflow: hidden;
     }
+    
+    & > ul ul li {
+        padding: 1em 2.5em 1em 1rem;
+        margin-right: 1rem;
+}
 
     li:hover > ul {
         pointer-events: all;
     }
     
-    li:hover > ul > li {
-        transform: translateY(0);
+    & > ul > li:hover > ul {
+        transform: translateX(-1rem);
         opacity: 1;
     }
 
     
 }
 
-.bgtext {
-   position: relative;
-}
+// .bgtext {
+//    position: relative;
+// }
 
-.bgtext:after {
-    font-family: 'Pacifico', cursive;
-    font-size: 550%;
-    // letter-spacing: 0.2rem;
-    opacity: 0.7;
-    text-align: center;
-    background: green;
-    width: 100%;
-    content: " ТАНЦОВ КЛУБ АБРАКС";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    padding: 1rem;
-}
+// .bgtext:after {
+//     font-family: 'Pacifico', cursive;
+//     font-size: 550%;
+//     // letter-spacing: 0.2rem;
+//     opacity: 0.7;
+//     text-align: center;
+//     background: green;
+//     width: 100%;
+//     content: " ТАНЦОВ КЛУБ АБРАКС";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     z-index: -1;
+//     padding: 1rem;
+// }
 
 .logo {
     background: transparent;

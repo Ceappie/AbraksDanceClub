@@ -13,8 +13,10 @@ article {
         display: block;
         background: rgba(0, 0,  0, 0.6);
         color: var(--base-text-color);
+        text-transform: uppercase;
         text-align: center;
-        letter-spacing: 0.8rem;
+        letter-spacing: 0.3em;
+        text-indent: 0.3em;
         padding: var(--base-padding);
         border-radius: var(--article-h1-brdrd);
         margin: var(--base-margin);
@@ -24,4 +26,8 @@ article {
         display: flex;
         justify-content: center;
     }
+}
+
+.site-content {
+    min-height: 100vh;
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
+    <title>{% if page.url != '/' %}{{ page.title }}{% else %}Начало{% endif %}</title>
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/site.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
@@ -24,7 +24,8 @@
     </main>
     
     <footer class="site-footer">
-      &copy; Abraks 2019
+     <span>&copy; Abraks Dance Club 2019</span>
+     <span class="maker">Дизайн: Ceappie</span>
     </footer>
   </body>
 </html>

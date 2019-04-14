@@ -2,31 +2,57 @@
     <ul>
         {% assign sorted_pages = site.pages | sort:"order" %}
         {% for item in sorted_pages %}
-        {% if item.url != '/feed.xml' and item.url != '/groups/kids.html' %}
-        <li>
-            <a href="{{ site.baseurl }}{{ item.url }}">
+        {% if item.url != '/feed.xml' and item.type != 'nested' %}
+        <li{% if item.type == 'chevron' %} class="chevron"{% elsif item.url == '/' %} class="li-logo"{% endif %}>
+            <a{% if item.type != 'chevron' %} href="{{ site.baseurl }}{{ item.url }}"{% endif %}>
             <span class="title">{{ item.title }}</span>
             </a>
             {% if item.url == '/groups/groups/' %}
-            <ul>
+            <ul class="child-page">
                 <li>
-                    <a href="/groups/kids.html">
+                    <a href="{{ site.baseurl }}/groups/kids.html">
                         <span class="title">Деца 5г. - 14г.</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/groups/beginners.html">
+                    <a href="{{ site.baseurl }}/groups/beginners.html">
                         <span class="title">Начинаещи</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/groups/advanced.html">
+                    <a href="{{ site.baseurl }}/groups/advanced.html">
                         <span class="title">Напреднали</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/groups/ensemble.html">
+                    <a href="{{ site.baseurl }}/groups/ensemble.html">
                         <span class="title">Ансамбъл</span>
+                    </a>
+                </li>
+            </ul>
+            {% elsif item.url == '/dance-halls/' %}
+            <ul>
+                <li>
+                    <a href="{{ site.baseurl }}/dh-dupnica.html">
+                        <span class="title">Дупница</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ site.baseurl }}/dh-djerman.html">
+                        <span class="title">Джерман</span>
+                    </a>
+                </li>
+            </ul>
+            {% elsif item.url == '/gallery/' %}
+            <ul>
+                <li>
+                    <a href="{{ site.baseurl }}/gallery-hora.html">
+                        <span class="title">Български танци</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ site.baseurl }}/gallery-salsa.html">
+                        <span class="title">Салса</span>
                     </a>
                 </li>
             </ul>

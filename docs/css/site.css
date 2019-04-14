@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
 @import url("https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
@@ -188,8 +187,10 @@ article h2 {
   display: block;
   background: rgba(0, 0, 0, 0.6);
   color: var(--base-text-color);
+  text-transform: uppercase;
   text-align: center;
-  letter-spacing: 0.8rem;
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
   padding: var(--base-padding);
   border-radius: var(--article-h1-brdrd);
   margin: var(--base-margin); }
@@ -198,8 +199,20 @@ article header {
   display: flex;
   justify-content: center; }
 
+.site-content {
+  min-height: 100vh; }
+
 .header {
   background: #FFF; }
+
+.site-footer {
+  background-image: linear-gradient(to right top, #79f149, #60c936, #49a324, #327f12, #1b5c01);
+  padding: 0.5rem 0 0.5rem 1rem;
+  color: #FFF; }
+
+.maker {
+  float: right;
+  padding-right: 1rem; }
 
 /* 
  * HEADER TOP MENU
@@ -220,14 +233,36 @@ article header {
     display: flex; }
     .header-top-menu ul li {
       padding-right: 1.5rem; }
+      .header-top-menu ul li .ht-map::before {
+        font-family: "Font Awesome 5 Free";
+        content: '\f3c5';
+        font-weight: 900; }
+      .header-top-menu ul li .ht-mobile::before {
+        font-family: "Font Awesome 5 Free";
+        content: '\f3cd';
+        font-weight: 900; }
+      .header-top-menu ul li .ht-mail::before {
+        font-family: "Font Awesome 5 Free";
+        content: '\f0e0';
+        font-weight: 900; }
+      .header-top-menu ul li .ht-facebook::before {
+        font-family: "Font Awesome 5 Brands";
+        content: '\f09a';
+        font-weight: 700; }
       .header-top-menu ul li a:hover {
         color: yellow; }
   .header-top-menu .search {
     display: flex;
     padding-left: 2rem; }
     .header-top-menu .search input {
-      padding-left: 1.5rem;
+      padding-left: 0.4rem;
       width: 80%; }
+  .header-top-menu .search::before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f002';
+    font-weight: 900;
+    color: #FFF;
+    padding-right: 0.4rem; }
 
 /*
  * HEADER TOP MENU - ANIMATION RIGHT
@@ -259,6 +294,7 @@ article header {
  */
 .navigation {
   display: flex;
+  background: green;
   width: 100%;
   margin: 0 auto;
   justify-content: space-between;
@@ -266,23 +302,27 @@ article header {
 
 .main-nav {
   margin: auto; }
-  .main-nav ul {
+  .main-nav .chevron::after {
+    font-family: "Font Awesome 5 Free";
+    content: '\f078';
+    font-weight: 900;
+    color: #FFF; }
+  .main-nav > ul {
     display: flex;
     align-items: center;
     margin: 1rem 0;
     opacity: 0.8; }
-    .main-nav ul li {
-      background: rgba(0, 0, 0, 0.3);
-      padding: 1rem;
-      margin-right: 0.3rem;
-      border-radius: var(--base-brdrd-pad); }
-      .main-nav ul li a {
+    .main-nav > ul li {
+      padding-right: 1rem;
+      margin-right: 0.3rem; }
+      .main-nav > ul li a {
         font-size: 1.3em;
         color: #FFF; }
-    .main-nav ul .current-page,
-    .main-nav ul li:hover {
-      background: #999; }
-  .main-nav > ul ul li {
+    .main-nav > ul .li-logo {
+      border-radius: 50%; }
+    .main-nav > ul a:hover {
+      color: aqua; }
+  .main-nav > ul > li > ul {
     opacity: 0;
     -webkit-transform: translateY(-2rem);
             transform: translateY(-2rem);
@@ -290,36 +330,21 @@ article header {
   .main-nav > ul ul {
     display: block;
     position: absolute;
-    top: 100%;
-    left: 0;
+    background: rgba(0, 128, 0, 0.8);
     z-index: 100;
     pointer-events: none;
     border-bottom-left-radius: 0.3em;
     border-bottom-right-radius: 0.3em;
     overflow: hidden; }
+  .main-nav > ul ul li {
+    padding: 1em 2.5em 1em 1rem;
+    margin-right: 1rem; }
   .main-nav li:hover > ul {
     pointer-events: all; }
-  .main-nav li:hover > ul > li {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+  .main-nav > ul > li:hover > ul {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
     opacity: 1; }
-
-.bgtext {
-  position: relative; }
-
-.bgtext:after {
-  font-family: 'Pacifico', cursive;
-  font-size: 550%;
-  opacity: 0.7;
-  text-align: center;
-  background: green;
-  width: 100%;
-  content: " ТАНЦОВ КЛУБ АБРАКС";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  padding: 1rem; }
 
 .logo {
   background: transparent;
@@ -482,76 +507,80 @@ ul.galery img {
 
 .contacts {
   background-image: linear-gradient(to right top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c); }
-
-.contacts section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "adr adr evp . map" "tel tel fac . map" "msg msg msg . map" "msg msg msg . map";
-  color: var(--base-text-color);
-  width: 100%; }
-
-.contacts section .address {
-  grid-area: adr; }
-
-.contacts section .email {
-  grid-area: evp; }
-
-.contacts section .telephone {
-  grid-area: tel; }
-
-.contacts section .social {
-  grid-area: fac; }
-
-.contacts section iframe {
-  grid-area: map; }
-
-.contacts section .message {
-  grid-area: msg; }
-
-.contacts section p a:hover {
-  color: var(--base-color-brd-hover); }
-
-.contacts section p:nth-child(3),
-.contacts section p:nth-child(4) {
-  padding-bottom: 0; }
-
-.contacts section .message h2 {
-  background: none;
-  text-align: center;
-  padding-right: 10rem; }
-
-.contacts section .message p {
-  padding-bottom: 0.5rem; }
-
-.contacts section .message p:nth-child(5) {
-  padding-bottom: 0; }
-
-.contacts section .message input,
-.contacts section .message textarea {
-  border: 2px solid #000;
-  border-radius: var(--base-brdrd-pad); }
-
-.contacts section .message input {
-  width: 80%;
-  padding: 0.2rem 0 0.2rem var(--base-inp-padleft);
-  border-radius: var(--base-brdrd-pad); }
-
-.contacts section .message textarea {
-  padding-left: var(--base-inp-padleft);
-  width: 45%;
-  height: auto; }
-
-.contacts section .message input:hover,
-.contacts section .message textarea:hover {
-  border: 2px solid var(--base-color-brd-hover); }
-
-.contacts section .message input:focus,
-.contacts section .message textarea:focus {
-  border: 2px solid var(--base-color-brd-focus); }
-
-.contacts section .message button {
-  padding: 0.4rem var(--base-padding); }
+  .contacts section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "adr adr evp . map" "tel tel fac . map" "msg msg msg . map" "msg msg msg . map";
+    color: var(--base-text-color);
+    width: 100%; }
+    .contacts section .address {
+      grid-area: adr; }
+    .contacts section .email {
+      grid-area: evp; }
+    .contacts section .telephone {
+      grid-area: tel; }
+    .contacts section .social {
+      grid-area: fac; }
+    .contacts section iframe {
+      grid-area: map; }
+    .contacts section .message {
+      grid-area: msg; }
+    .contacts section p a:hover {
+      color: var(--base-color-brd-hover); }
+    .contacts section p:nth-child(3),
+    .contacts section p:nth-child(4) {
+      padding-bottom: 0; }
+    .contacts section .message h2 {
+      background: none;
+      text-align: center;
+      padding-right: 10rem; }
+    .contacts section .message p {
+      padding-bottom: 0.5rem; }
+    .contacts section .message p:nth-child(5) {
+      padding-bottom: 0; }
+    .contacts section .message input,
+    .contacts section .message textarea {
+      border: 2px solid #000;
+      border-radius: var(--base-brdrd-pad); }
+    .contacts section .message input {
+      width: 80%;
+      padding: 0.2rem 0 0.2rem var(--base-inp-padleft);
+      border-radius: var(--base-brdrd-pad); }
+    .contacts section .message textarea {
+      padding-left: var(--base-inp-padleft);
+      width: 45%;
+      height: auto; }
+    .contacts section .message input:hover,
+    .contacts section .message textarea:hover {
+      border: 2px solid var(--base-color-brd-hover); }
+    .contacts section .message input:focus,
+    .contacts section .message textarea:focus {
+      border: 2px solid var(--base-color-brd-focus); }
+    .contacts section .message button {
+      padding: 0.4rem var(--base-padding); }
 
 /* ABOUT US */
 .about section p {
   text-align: center; }
+
+/* HOME PAGE */
+.main-page {
+  background: url("/AbraksDanceClub/images/bg-home.jpg") no-repeat center center;
+  background-position: center 50%;
+  background-size: cover; }
+  .main-page section {
+    font-size: 300%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    color: green;
+    border-radius: 0.5em;
+    font-weight: bold; }
+    .main-page section h4 {
+      font-size: 100%;
+      padding: 2rem;
+      font-weight: bold; }
+    .main-page section p {
+      line-height: 1;
+      display: block; }
+    .main-page section p:nth-child(6) {
+      padding-bottom: 0; }
