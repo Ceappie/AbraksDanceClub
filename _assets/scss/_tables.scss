@@ -1,4 +1,5 @@
 .table-wrapper {
+    background-image: linear-gradient(to right bottom, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
     width: 100%;
 }
 
@@ -48,7 +49,7 @@ table {
 }
 
 .salsa-advanced {
-    background: red;
+    background: rgb(247, 41, 41);
 }
 
 .hora-advanced {
@@ -57,4 +58,54 @@ table {
 
 .ensemble {
     background: lightblue;
+}
+
+
+/* SCHEDULE MOBILE VERSION */
+
+.schedule-mobile {
+    display: none;
+}
+
+@include rp('tablet') {
+    .schedule-laptop { display: none; }
+
+    .schedule-mobile {
+        display: inline-block;
+        background: rgba(0, 0,  0, 0.3);
+        padding: 1rem;
+
+        li {
+            color: #FFF;
+            padding-bottom: 1rem;
+
+            span {
+                padding-bottom: 0.1rem;
+            }
+        }
+    }
+
+    .day > span {
+        border-bottom: 2px solid #999;
+    }
+
+    .day > ul > li:nth-child(1) {
+        padding-top: 0.5rem;
+
+        span {
+            border-bottom: 2px solid yellow;
+        }
+    }
+
+    .day > ul > li:nth-child(2) span {
+        border-bottom: 2px solid lime;
+    }
+
+    .day > ul > li:nth-child(3) span {
+        border-bottom: 2px solid rgb(252, 66, 34);
+    }
+
+    .day > ul > li:nth-child(4) span {
+        border-bottom: 2px solid aqua;
+    }
 }

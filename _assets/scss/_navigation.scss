@@ -177,7 +177,7 @@
         }
 
         .li-logo {
-            border-radius: 50%;
+            padding-top: 0.5rem;
         }
         
         a:hover {
@@ -247,6 +247,7 @@
 .home-btn {
     position: absolute;
     right: 0;
+    top: 7%;
 
     img {
         width: 40%;
@@ -263,7 +264,6 @@
 /*
  * HEADER MAIN NAVIGATION - ANIMATION
  */
-
 
 .main-nav {
 

@@ -343,7 +343,7 @@ article header {
         font-size: 1.3em;
         color: #FFF; }
     .main-nav > ul .li-logo {
-      border-radius: 50%; }
+      padding-top: 0.5rem; }
     .main-nav > ul a:hover {
       color: aqua; }
   @media (min-width: 991px) {
@@ -395,9 +395,10 @@ article header {
 
 .home-btn {
   position: absolute;
-  right: 0; }
+  right: 0;
+  top: 7%; }
   .home-btn img {
-    width: 60%;
+    width: 40%;
     height: auto; }
 
 #toggle-main-nav {
@@ -510,6 +511,7 @@ input:focus + i {
   border-color: #47A; }
 
 .table-wrapper {
+  background-image: linear-gradient(to right bottom, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
   width: 100%; }
 
 table {
@@ -541,7 +543,7 @@ table {
   background: green; }
 
 .salsa-advanced {
-  background: red; }
+  background: #f72929; }
 
 .hora-advanced {
   background: #fc4222; }
@@ -549,116 +551,165 @@ table {
 .ensemble {
   background: lightblue; }
 
-ul.galery {
-  padding-left: 0; }
+/* SCHEDULE MOBILE VERSION */
+.schedule-mobile {
+  display: none; }
 
-ul.galery li {
-  display: inline-block;
-  width: 32%;
-  vertical-align: top;
-  margin-right: 1.5%;
-  margin-bottom: 1.5em; }
+@media (max-width: 990px) {
+  .schedule-laptop {
+    display: none; }
+  .schedule-mobile {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem; }
+    .schedule-mobile li {
+      color: #FFF;
+      padding-bottom: 1rem; }
+      .schedule-mobile li span {
+        padding-bottom: 0.1rem; }
+  .day > span {
+    border-bottom: 2px solid #999; }
+  .day > ul > li:nth-child(1) {
+    padding-top: 0.5rem; }
+    .day > ul > li:nth-child(1) span {
+      border-bottom: 2px solid yellow; }
+  .day > ul > li:nth-child(2) span {
+    border-bottom: 2px solid lime; }
+  .day > ul > li:nth-child(3) span {
+    border-bottom: 2px solid #fc4222; }
+  .day > ul > li:nth-child(4) span {
+    border-bottom: 2px solid aqua; } }
 
-ul.galery li:nth-child(3n+3) {
-  margin-right: 0; }
+/* ACHIEVMENTS */
+.achievments-wrapper {
+  background-image: linear-gradient(to left, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c); }
+  .achievments-wrapper .cup-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .achievments-wrapper .cup-list li {
+      flex: 0 1 32%;
+      text-align: center;
+      margin: 2rem 0; }
+    .achievments-wrapper .cup-list img {
+      border: 2px solid #777;
+      border-radius: 0.3em;
+      box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.75);
+      width: 50%;
+      height: auto; }
+    .achievments-wrapper .cup-list p {
+      border: 2px solid #777;
+      font-size: 150%;
+      text-shadow: 1px 1px 3px #000;
+      box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.75);
+      border-radius: 0.3em;
+      padding: 1rem;
+      margin: 0.5rem 0; }
 
-ul.galery img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 0.5rem solid black;
-  padding: 1rem;
-  background: white;
-  outline: 1rem solid yellow;
-  box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.6); }
-
-.contacts {
+.contacts-wrapper {
   background-image: linear-gradient(to right top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c); }
-  .contacts section {
+  .contacts-wrapper section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "adr adr evp . map" "tel tel fac . map" "msg msg msg . map" "msg msg msg . map";
     color: var(--base-text-color);
     width: 100%; }
-    .contacts section .address {
+    .contacts-wrapper section .address {
       grid-area: adr; }
-    .contacts section .email {
+    .contacts-wrapper section .email {
       grid-area: evp; }
-    .contacts section .telephone {
+    .contacts-wrapper section .telephone {
       grid-area: tel; }
-    .contacts section .social {
+    .contacts-wrapper section .social {
       grid-area: fac; }
-    .contacts section iframe {
+    .contacts-wrapper section iframe {
       grid-area: map; }
-    .contacts section .message {
+    .contacts-wrapper section .message {
       grid-area: msg; }
-    .contacts section p a:hover {
+    .contacts-wrapper section p a:hover {
       color: var(--base-color-brd-hover); }
-    .contacts section p:nth-child(3),
-    .contacts section p:nth-child(4) {
+    .contacts-wrapper section p:nth-child(3),
+    .contacts-wrapper section p:nth-child(4) {
       padding-bottom: 0; }
-    .contacts section .message h2 {
+    .contacts-wrapper section .message h2 {
       background: none;
       text-align: center;
       padding-right: 10rem; }
-    .contacts section .message p {
+    .contacts-wrapper section .message p {
       padding-bottom: 0.5rem; }
-    .contacts section .message p:nth-child(5) {
+    .contacts-wrapper section .message p:nth-child(5) {
       padding-bottom: 0; }
-    .contacts section .message input,
-    .contacts section .message textarea {
+    .contacts-wrapper section .message input,
+    .contacts-wrapper section .message textarea {
       border: 2px solid #000;
       border-radius: var(--base-brdrd-pad); }
-    .contacts section .message input {
+    .contacts-wrapper section .message input {
       width: 80%;
       padding: 0.2rem 0 0.2rem var(--base-inp-padleft);
       border-radius: var(--base-brdrd-pad); }
-    .contacts section .message textarea {
+    .contacts-wrapper section .message textarea {
       padding-left: var(--base-inp-padleft);
       width: 45%;
       height: auto; }
-    .contacts section .message input:hover,
-    .contacts section .message textarea:hover {
+    .contacts-wrapper section .message input:hover,
+    .contacts-wrapper section .message textarea:hover {
       border: 2px solid var(--base-color-brd-hover); }
-    .contacts section .message input:focus,
-    .contacts section .message textarea:focus {
+    .contacts-wrapper section .message input:focus,
+    .contacts-wrapper section .message textarea:focus {
       border: 2px solid var(--base-color-brd-focus); }
-    .contacts section .message button {
+    .contacts-wrapper section .message button {
       padding: 0.4rem var(--base-padding); }
     @media (max-width: 990px) {
-      .contacts section {
+      .contacts-wrapper section {
         grid-template-columns: repeat(1, 1fr);
         grid-template-areas: "adr" "tel" "evp" "fac" "msg" "map"; }
-        .contacts section p.telephone {
+        .contacts-wrapper section p.telephone {
           padding-bottom: 0.5rem; }
-        .contacts section .message {
+        .contacts-wrapper section .message {
           padding: 1rem; }
-        .contacts section iframe {
-          width: 200px;
+        .contacts-wrapper section iframe {
+          width: 300px;
           height: 300px; } }
 
 /* ABOUT US */
-.about section p {
-  text-align: center; }
+.about-wrapper {
+  background-image: linear-gradient(to right, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c); }
+  .about-wrapper .about section p {
+    text-align: center; }
 
 /* HOME PAGE */
 .main-page {
-  background: url("/AbraksDanceClub/images/bg-home.png") no-repeat center center;
+  background: url("/images/bg-home.png") no-repeat center center;
   background-position: center 50%;
   background-size: cover; }
   .main-page section {
     font-size: 300%;
     text-align: center;
-    background: rgba(0, 0, 0, 0.4);
-    color: green;
+    text-shadow: 1px 1px 5px #000;
+    color: #000;
     border-radius: 0.5em;
     font-weight: bold; }
     .main-page section h4 {
       font-size: 100%;
       padding: 2rem;
-      font-weight: bold; }
+      font-weight: bold;
+      text-transform: uppercase; }
     .main-page section p {
       line-height: 1;
-      display: block; }
+      display: block;
+      opacity: 1; }
     .main-page section p:nth-child(6) {
       padding-bottom: 0; }
+
+/* HOME-FESTIVAL */
+.home-festival-wrapper {
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c); }
+  .home-festival-wrapper img {
+    width: 30%;
+    height: auto;
+    float: right;
+    clear: both;
+    border-radius: 0.3em;
+    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.75);
+    margin-right: 0.5rem; }
