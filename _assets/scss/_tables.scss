@@ -70,9 +70,16 @@ table {
 @include rp('tablet') {
     .schedule-laptop { display: none; }
 
+    .table-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
     .schedule-mobile {
         display: inline-block;
+        text-align: center;
         background: rgba(0, 0,  0, 0.3);
+        border-radius: 0.3em;
         padding: 1rem;
 
         li {

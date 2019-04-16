@@ -238,6 +238,11 @@
     @include rp('laptop') { display: none; }
 }
 
+.mobile-main-nav {
+    display: flex;
+    align-items: center;
+}
+
 #toggle-main-nav-button {
     font-size: 200%;
     color: #FFF;
@@ -247,7 +252,6 @@
 .home-btn {
     position: absolute;
     right: 0;
-    top: 7%;
 
     img {
         width: 40%;

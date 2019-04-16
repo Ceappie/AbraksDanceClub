@@ -1,5 +1,7 @@
-<label id="toggle-main-nav-button" for="toggle-main-nav"><i class="fa fa-bars"></i></label>
-<span class="home-btn"><a href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/images/logo.png" alt=""></a></span>
+<div class="mobile-main-nav">
+    <label id="toggle-main-nav-button" for="toggle-main-nav"><i class="fa fa-bars"></i></label>
+    <span class="home-btn"><a href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/images/logo.png" alt=""></a></span>
+</div>
 <nav class="main-nav">
     <ul>
         {% assign sorted_pages = site.pages | sort:"order" %}
