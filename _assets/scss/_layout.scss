@@ -1,5 +1,5 @@
 body {
-    background: #CCC;
+    // background: #CCC;
 }
 
 article {
@@ -7,6 +7,7 @@ article {
 }
 
 article {
+    min-height: 100vh;
 
     h1,
     h2 {
@@ -29,6 +30,6 @@ article {
 }
 
 .site-content {
-    background: rgb(3, 201, 3);
+    // background: rgb(3, 201, 3);
     min-height: 100vh;
 }

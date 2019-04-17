@@ -23,3 +23,14 @@
         opacity: 1;
     }
 }
+
+@keyframes list-animation-top {
+    0% {
+        top: -5rem;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}

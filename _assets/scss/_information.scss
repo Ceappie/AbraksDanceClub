@@ -1,5 +1,5 @@
 .contacts-wrapper {
-    background-image: linear-gradient(to right top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+    background-image: linear-gradient(to right top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c); 
 
     section {
         display: grid;
@@ -11,6 +11,7 @@
             "msg msg msg . map";
         color: var(--base-text-color);
         width: 100%;
+        text-shadow: 1px 1px 5px #000;
 
         .address{
             grid-area: adr;
@@ -126,10 +127,21 @@
 /* ABOUT US */
 
 .about-wrapper {
-    background-image: linear-gradient(to right, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+    background-image: linear-gradient(to right top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
 
-    .about section p {
+    section {
         text-align: center;
+
+        p {
+            text-align: justify;
+            font-size: 1.2em;
+            padding-bottom: 2rem;
+        }
+
+        img {
+            width: 80%;
+            height: auto;
+        }
     }
 }
 
@@ -138,17 +150,36 @@
 
 
 .main-page-wrapper {
-    background: url('/AbraksDanceClub/images/bg-home.png') no-repeat center center;
-    background-position: center 50%;
+    background: url('/AbraksDanceClub/images/home.jpg') no-repeat center center;
+    background-position: center;
     background-size: cover;
 
+    header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: #FFF;
+        margin-bottom: 15rem;
+        
+        h2,
+        h3 {
+            background: none;
+            display: inline-block;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 5px #000;
+            padding: 1rem 0;
+        }
+    }
+
     section {
-        font-size: 300%;
+        font-size: 2em;
         text-align: center;
         text-shadow: 1px 1px 5px #000;
-        color: #000;
+        // background: rgba(0, 0,  0, 0.3);
+        color: #FFF;
         border-radius: 0.5em;
         font-weight: bold;
+        margin-top: 15rem;
         
         h4 {
             font-size: 100%;
@@ -168,6 +199,13 @@
             padding-bottom: 0;
         }
     }
+
+    &:after {
+        display: block;
+        content: '';
+        
+        
+    }
 }
 
 
@@ -175,6 +213,7 @@
 
 
 .home-festival-wrapper {
+    text-align: justify;
     min-height: 100vh;
     background-image: linear-gradient(to bottom, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
 
@@ -185,9 +224,11 @@
         clear: both;
         border-radius: 0.3em;
         box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
-        margin-right: 0.5rem;
+        margin-left: 2rem;
     }
 
     p {
+        padding-bottom: 2rem;
+        font-size: 1.2em;
     }
 }

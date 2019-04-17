@@ -1,5 +1,13 @@
 /* GALLERY SALSA */
 
+.gallery-salsa-wrapper {
+    background-image: linear-gradient(to left top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+}
+
+.gallery-hora-wrapper {
+    background-image: linear-gradient(to left bottom, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+}
+
 .gallery-hora,
 .gallery-salsa {
     display: grid;
@@ -33,4 +41,8 @@
     @include rp('tablet') {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+.gallery-hora {
+    grid-template-columns: repeat(5, 1fr);
 }

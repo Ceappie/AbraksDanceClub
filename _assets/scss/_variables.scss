@@ -1,5 +1,5 @@
 :root {
-    --base-fz-mobile: 14px;
+    --base-fz-mobile: 12px;
     --base-ws-global: 1.5em;
     --base-lt-global: 3em;
     
@@ -9,7 +9,7 @@
     --base-fz-tv: 20px;
 
     --base-padding: 2rem;
-    --base-margin: 2rem 0;
+    --base-margin: 2rem 0 3rem 0;
     --article-h1-brdrd: 0.5em; 
 
     --base-text-color: #FFFFFF;
@@ -31,17 +31,16 @@
 }
 
 %nav-animation-left {
-    position: relative;
-    opacity: 0;
-    animation-duration: var(--basic-animation-duration);
-    animation-fill-mode: forwards;
+    @extend %nav-animation;
     animation-name: list-animation-left;
 }
 
 %nav-animation-right {
-    position: relative;
-    opacity: 0;
-    animation-duration: var(--basic-animation-duration);
-    animation-fill-mode: forwards;
+    @extend %nav-animation;
     animation-name: list-animation-right;
+}
+
+%nav-animation-top {
+    @extend %nav-animation;
+    animation-name: list-animation-top;
 }

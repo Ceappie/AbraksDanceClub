@@ -11,6 +11,7 @@
     justify-content: space-between;
     background-image: linear-gradient(to right top, #79f149, #60c936, #49a324, #327f12, #1b5c01);
     padding: 0.5rem 1rem;
+    text-shadow: 1px 1px 5px #000;
 
     i {
         color: var(--base-text-color);
@@ -72,6 +73,12 @@
     }
 }
 
+@media (max-width: 1120px) {
+    .header-top-menu ul li a span {
+        display: none;
+    }
+}
+
 /*
  * HEADER TOP MENU - ANIMATION RIGHT
  */
@@ -81,26 +88,26 @@
     ul {
     
         li:nth-child(1) {
-            @extend %nav-animation-left;
+            @extend %nav-animation-top;
         }
 
         li:nth-child(2) {
-            @extend %nav-animation-left;
+            @extend %nav-animation-top;
             animation-delay: var(--basic-animation-delay);
         } 
 
         li:nth-child(3) {
-            @extend %nav-animation-left;
+            @extend %nav-animation-top;
             animation-delay: calc(var(--basic-animation-delay) * 2);
         }
 
         li:nth-child(4) {
-            @extend %nav-animation-left;
+            @extend %nav-animation-top;
             animation-delay: calc(var(--basic-animation-delay) * 3);
         }
 
         .search {
-            @extend %nav-animation-left;
+            @extend %nav-animation-top;
             animation-delay: calc(var(--basic-animation-delay) * 4);
         }
     }
@@ -121,6 +128,7 @@
 
 .main-nav {
     margin: auto;
+    text-shadow: 1px 1px 5px #000;
 
     .chevron::after {
         font-family: "Font Awesome 5 Free";
