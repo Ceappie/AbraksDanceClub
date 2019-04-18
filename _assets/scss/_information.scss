@@ -1,156 +1,5 @@
-.contacts-wrapper {
-    background-image: linear-gradient(to right top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c); 
-
-    section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: 
-            "adr adr evp . map"
-            "tel tel fac . map"
-            "msg msg msg . map"
-            "msg msg msg . map";
-        color: var(--base-text-color);
-        width: 100%;
-        text-shadow: 1px 1px 5px #000;
-
-        .address{
-            grid-area: adr;
-        }
-
-        .email{
-            grid-area: evp;
-        }
-
-        .telephone{
-            grid-area: tel;
-        }
-
-        .social{
-            grid-area: fac;
-        }
-
-        iframe{
-            grid-area: map;
-        }
-
-        .message {
-            grid-area: msg;
-        }
-
-        p {
-
-            a:hover {
-                color: var(--base-color-brd-hover);
-            }
-        }
-
-        p:nth-child(3),
-        p:nth-child(4) {
-            padding-bottom: 0;
-        }
-
-        .message {
-
-            h2 {
-                background: none;
-                text-align: center;
-                padding-right: 10rem;
-            }
-
-            p {
-                padding-bottom: 0.5rem;
-            }
-
-            p:nth-child(5) {
-                padding-bottom: 0;
-            }
-
-            input,
-            textarea {
-                border: 2px solid #000;
-                border-radius: var(--base-brdrd-pad);
-            }
-
-            input {
-                width: 80%;
-                padding: 0.2rem 0 0.2rem var(--base-inp-padleft);
-                border-radius: var(--base-brdrd-pad);
-            }
-
-            textarea {
-                padding-left: var(--base-inp-padleft);
-                width: 45%;
-                height: auto;
-            }
-
-            input:hover,
-            textarea:hover {
-                border: 2px solid var(--base-color-brd-hover);
-            }
-
-            input:focus,
-            textarea:focus {
-                border: 2px solid var(--base-color-brd-focus);
-            }
-
-            button {
-                padding: 0.4rem var(--base-padding);
-            }
-        }
-
-        @include rp('tablet') {
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-areas: 
-            "adr"
-            "tel"
-            "evp"
-            "fac"
-            "msg"
-            "map";
-
-            p.telephone {
-                padding-bottom: 0.5rem;
-            }
-
-            .message {
-                padding: 1rem;
-            }
-
-            iframe {
-                width: 300px;
-                height: 300px;
-            }
-        }
-    }
-}
-
-/* ABOUT US */
-
-.about-wrapper {
-    background-image: linear-gradient(to right top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
-
-    section {
-        text-align: center;
-
-        p {
-            text-align: justify;
-            font-size: 1.2em;
-            padding-bottom: 2rem;
-        }
-
-        img {
-            width: 80%;
-            height: auto;
-        }
-    }
-}
-
-
-/* HOME PAGE */
-
-
 .main-page-wrapper {
-    background: url('/AbraksDanceClub/images/home.jpg') no-repeat center center;
+    background: url('AbraksDanceClub/images/home.jpg') no-repeat center center;
     background-position: center;
     background-size: cover;
 
@@ -174,8 +23,7 @@
     section {
         font-size: 2em;
         text-align: center;
-        text-shadow: 1px 1px 5px #000;
-        // background: rgba(0, 0,  0, 0.3);
+        text-shadow: 3px 6px 5px #000;
         color: #FFF;
         border-radius: 0.5em;
         font-weight: bold;
@@ -192,7 +40,7 @@
             line-height: 1;
             display: block;
             opacity: 1;
-            
+            text-shadow: 3px 6px 5px #000;
         }
 
         p:nth-child(6) {
@@ -203,32 +51,5 @@
     &:after {
         display: block;
         content: '';
-        
-        
-    }
-}
-
-
-/* HOME-FESTIVAL */
-
-
-.home-festival-wrapper {
-    text-align: justify;
-    min-height: 100vh;
-    background-image: linear-gradient(to bottom, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
-
-    img {
-        width: 30%;
-        height: auto;
-        float: right;
-        clear: both;
-        border-radius: 0.3em;
-        box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
-        margin-left: 2rem;
-    }
-
-    p {
-        padding-bottom: 2rem;
-        font-size: 1.2em;
     }
 }

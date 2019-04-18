@@ -1,4 +1,6 @@
-/* GALLERY SALSA */
+/*
+ * SALSA
+ */
 
 .gallery-salsa-wrapper {
     background-image: linear-gradient(to left top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
@@ -43,6 +45,19 @@
     }
 }
 
+
+/*
+ * HORA
+ */
+
 .gallery-hora {
     grid-template-columns: repeat(5, 1fr);
+
+    @include rp('tablet') {
+        grid-template-columns: repeat(2, 1fr);
+
+        .mobile-hide {
+            display: none;
+        }
+    }
 }

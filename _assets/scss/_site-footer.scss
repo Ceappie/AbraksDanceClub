@@ -9,6 +9,10 @@
     
     .footer-logo {
         text-transform: uppercase;
+
+        @include rp('mobile') {
+            display: none;
+        }
     }
 
     .maker {

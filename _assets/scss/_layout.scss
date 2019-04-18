@@ -1,9 +1,10 @@
 body {
     // background: #CCC;
+    max-width: 1900px;
 }
 
 article {
-    padding: var(--base-padding);
+    padding: $base-padding;
 }
 
 article {
@@ -13,14 +14,14 @@ article {
     h2 {
         display: block;
         background: rgba(0, 0,  0, 0.3);
-        color: var(--base-text-color);
+        color: $base-text-color;
         text-transform: uppercase;
         text-align: center;
-        letter-spacing: 0.3em;
+        letter-spacing: 0.1em;
         text-indent: 0.3em;
-        padding: var(--base-padding);
-        border-radius: var(--article-h1-brdrd);
-        margin: var(--base-margin);
+        padding: $base-padding;
+        border-radius: $article-h1-brdrd;
+        margin: $base-margin;
     }
 
     header {
@@ -30,6 +31,5 @@ article {
 }
 
 .site-content {
-    // background: rgb(3, 201, 3);
     min-height: 100vh;
 }

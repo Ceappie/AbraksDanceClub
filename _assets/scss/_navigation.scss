@@ -14,7 +14,7 @@
     text-shadow: 1px 1px 5px #000;
 
     i {
-        color: var(--base-text-color);
+        color: $base-text-color;
         padding-right: 0.2rem;
     }
 
@@ -93,22 +93,22 @@
 
         li:nth-child(2) {
             @extend %nav-animation-top;
-            animation-delay: var(--basic-animation-delay);
+            animation-delay: $basic-animation-delay;
         } 
 
         li:nth-child(3) {
             @extend %nav-animation-top;
-            animation-delay: calc(var(--basic-animation-delay) * 2);
+            animation-delay: calc(#{$basic-animation-delay} * 2);
         }
 
         li:nth-child(4) {
             @extend %nav-animation-top;
-            animation-delay: calc(var(--basic-animation-delay) * 3);
+            animation-delay: calc(#{$basic-animation-delay} * 3);
         }
 
         .search {
             @extend %nav-animation-top;
-            animation-delay: calc(var(--basic-animation-delay) * 4);
+            animation-delay: calc(#{$basic-animation-delay} * 4);
         }
     }
 }
@@ -121,9 +121,7 @@
 }
 
 /*
-
  * HEADER MAIN NAVIGATION 
-
  */
 
 .main-nav {
@@ -150,6 +148,10 @@
                 padding-left: 2rem;
                 text-align: left;
                 align-items: flex-start;
+                
+                @include rp('mobile') {
+                    font-size: 1.2em;
+                }
             }
 
             .main-nav > ul > li{
@@ -283,17 +285,17 @@
 
         li:nth-child(1) {
             @extend %nav-animation-right;
-            animation-delay: calc(var(--basic-animation-delay) * 3);
+            animation-delay: calc(#{$basic-animation-delay} * 3);
         }
 
         li:nth-child(2) {
             @extend %nav-animation-right;
-            animation-delay: calc(var(--basic-animation-delay) * 2);
+            animation-delay: calc(#{$basic-animation-delay} * 2);
         }
 
         li:nth-child(3) {
             @extend %nav-animation-right;
-            animation-delay: calc(var(--basic-animation-delay) * 1);
+            animation-delay: calc(#{$basic-animation-delay} * 1);
         }
 
         li:nth-child(4) {
@@ -306,17 +308,17 @@
         
         li:nth-child(7) {
             @extend %nav-animation-left;
-            animation-delay: calc(var(--basic-animation-delay) * 1);
+            animation-delay: calc(#{$basic-animation-delay} * 1);
         }
         
         li:nth-child(8) {
             @extend %nav-animation-left;
-            animation-delay: calc(var(--basic-animation-delay) * 2);
+            animation-delay: calc(#{$basic-animation-delay} * 3);
         }
         
         li:nth-child(9) {
             @extend %nav-animation-left;
-            animation-delay: calc(var(--basic-animation-delay) * 3);
+            animation-delay: calc(#{$basic-animation-delay} * 4);
         }
     }
 }

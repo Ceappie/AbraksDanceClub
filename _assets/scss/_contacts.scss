@@ -1,0 +1,125 @@
+.contacts-wrapper {
+    background-image: linear-gradient(to right top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c); 
+
+    section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "adr adr evp . map"
+            "tel tel fac . map"
+            "msg msg msg . map"
+            "msg msg msg . map";
+        color: $base-text-color;
+        width: 100%;
+        text-shadow: 1px 1px 5px #000;
+
+        .address{
+            grid-area: adr;
+        }
+
+        .email{
+            grid-area: evp;
+        }
+
+        .telephone{
+            grid-area: tel;
+        }
+
+        .social{
+            grid-area: fac;
+        }
+
+        iframe{
+            grid-area: map;
+        }
+
+        .message {
+            grid-area: msg;
+        }
+
+        p {
+
+            a:hover {
+                color: $base-color-brd-hover;
+            }
+        }
+
+        p:nth-child(3),
+        p:nth-child(4) {
+            padding-bottom: 0;
+        }
+
+        .message {
+
+            h2 {
+                background: none;
+                text-align: center;
+                padding-right: 10rem;
+            }
+
+            p {
+                padding-bottom: 0.5rem;
+            }
+
+            p:nth-child(5) {
+                padding-bottom: 0;
+            }
+
+            input,
+            textarea {
+                border: 2px solid #000;
+                border-radius: $base-brdrd-pad;
+            }
+
+            input {
+                width: 80%;
+                padding: 0.2rem 0 0.2rem $base-inp-padleft;
+                border-radius: $base-brdrd-pad;
+            }
+
+            textarea {
+                padding-left: $base-inp-padleft;
+                width: 45%;
+                height: auto;
+            }
+
+            input:hover,
+            textarea:hover {
+                border: 2px solid $base-color-brd-hover;
+            }
+
+            input:focus,
+            textarea:focus {
+                border: 2px solid $base-color-brd-focus;
+            }
+
+            button {
+                padding: 0.4rem $base-padding;
+            }
+        }
+
+        @include rp('tablet') {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas: 
+            "adr"
+            "tel"
+            "evp"
+            "fac"
+            "msg"
+            "map";
+
+            p.telephone {
+                padding-bottom: 0.5rem;
+            }
+
+            .message {
+                padding: 1rem;
+            }
+
+            iframe {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+}

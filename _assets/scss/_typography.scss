@@ -1,28 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Philosopher:400,400i,700,700i&subset=cyrillic,cyrillic-ext');
 
-/* Typography Global Styles */
+
+/*
+ * Typography Global Styles
+ */
 
 html {
-    font-size: var(--base-fz-mobile);
+    font-size: $base-fz-mobile;
     line-height: 1.5;
     font-family: "PT Serif", Georgia, Tahoma, serif;
 }
 
 @media (min-width: 600px) {
-    html { font-size: var(--base-fz-tablet); }
+    html { font-size: $base-fz-tablet; }
 }
 
 @media (min-width: 1260px) {
-    html { font-size: var(--base-fz-laptop); }
+    html { font-size: $base-fz-laptop; }
 }
 
 @media (min-width: 1420px) {
-    html { font-size: var(--base-fz-desktop); }
+    html { font-size: $base-fz-desktop; }
 }
 
 @media (min-width: 1660px) {
-    html { font-size: var(--base-fz-tv); }
+    html { font-size: $base-fz-tv; }
 }
 
 p {
@@ -34,9 +37,10 @@ body, p, table, form, input, select, textarea, button, a, i, span {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'Philosopher', sans-serif;
     font-weight: normal;
     line-height: 1.1;
-    margin: 0 0 calc( var(--sizing-ws-base) / 2 ) 0;
+    margin: 0 0 calc( $sizing-ws-base / 2 ) 0;
 }
 
 h6 {
@@ -48,7 +52,7 @@ h2 { font-size: 2.4rem }
 h3 { font-size: 2.2rem }
 h4 { font-size: 2.0rem }
 h5 { font-size: 1.8rem }
-h6 { font-size: 1.6drem }
+h6 { font-size: 1.6rem }
 
 .ampersand {
     font-weight: bold;
@@ -62,5 +66,5 @@ li {
 
 a {
     text-decoration: none;
-    color: var(--base-text-color);
+    color: $base-text-color;
 }
