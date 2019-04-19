@@ -1,5 +1,4 @@
 .table-wrapper {
-    background-image: linear-gradient(to right bottom, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
     width: 100%;
 }
 
@@ -9,6 +8,7 @@ table {
     table-layout: fixed;
     text-align: center;
     width: 90%;
+    text-shadow: 1px 1px 0px #000;
 
     tr {
 
@@ -33,7 +33,7 @@ table {
 }
 
 .salsa-kids {
-    background: yellow;
+    background-image: radial-gradient(circle, #ffff00, #f6f604, #eeee07, #e5e50a, #dddd0c);
 }
 
 .hora-kids {
@@ -81,6 +81,7 @@ table {
         background: rgba(0, 0,  0, 0.3);
         border-radius: 0.3em;
         padding: 1rem;
+        text-shadow: 1px 1px 5px #000;
 
         li {
             color: #FFF;

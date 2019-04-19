@@ -1,4 +1,4 @@
-/* 
+/*
  * HEADER TOP MENU
  */
 
@@ -79,40 +79,6 @@
     }
 }
 
-/*
- * HEADER TOP MENU - ANIMATION RIGHT
- */
-
-.header-top-menu {
-
-    ul {
-    
-        li:nth-child(1) {
-            @extend %nav-animation-top;
-        }
-
-        li:nth-child(2) {
-            @extend %nav-animation-top;
-            animation-delay: $basic-animation-delay;
-        } 
-
-        li:nth-child(3) {
-            @extend %nav-animation-top;
-            animation-delay: calc(#{$basic-animation-delay} * 2);
-        }
-
-        li:nth-child(4) {
-            @extend %nav-animation-top;
-            animation-delay: calc(#{$basic-animation-delay} * 3);
-        }
-
-        .search {
-            @extend %nav-animation-top;
-            animation-delay: calc(#{$basic-animation-delay} * 4);
-        }
-    }
-}
-
 @include rp('tablet') {
 
     .header-top-menu ul li a span {
@@ -121,19 +87,14 @@
 }
 
 /*
- * HEADER MAIN NAVIGATION 
+ * HEADER MAIN NAVIGATION
  */
 
 .main-nav {
     margin: auto;
     text-shadow: 1px 1px 5px #000;
 
-    .chevron::after {
-        font-family: "Font Awesome 5 Free";
-        content: '\f078';
-        font-weight: 900;
-        color: #FFF;
-    }
+
 
     & > ul {
         display: flex;
@@ -148,7 +109,7 @@
                 padding-left: 2rem;
                 text-align: left;
                 align-items: flex-start;
-                
+
                 @include rp('mobile') {
                     font-size: 1.2em;
                 }
@@ -189,9 +150,20 @@
         .li-logo {
             padding-top: 0.5rem;
         }
-        
+
         a:hover {
             color: aqua;
+        }
+
+        .chevron {
+            cursor: default;
+
+            &::after {
+                font-family: "Font Awesome 5 Free";
+                content: '\f078';
+                font-weight: 900;
+                color: #FFF;
+            }
         }
     }
 
@@ -213,7 +185,7 @@
             border-bottom-right-radius: 0.3em;
             overflow: hidden;
         }
-        
+
         & > ul ul li {
             padding: 1em 2.5em 1em 1rem;
             margin-right: 1rem;
@@ -222,7 +194,7 @@
         li:hover > ul {
             pointer-events: all;
         }
-        
+
         & > ul > li:hover > ul {
             transform: translateX(-1rem);
             opacity: 1;
@@ -244,6 +216,8 @@
 
 .home-btn,
 #toggle-main-nav-button {
+    cursor: pointer;
+
     @include rp('tablet') { display: block; }
     @include rp('laptop') { display: none; }
 }
@@ -251,6 +225,12 @@
 .mobile-main-nav {
     display: flex;
     align-items: center;
+
+    .bars:before {
+        font-family: "Font Awesome 5 Free";
+        content: '\f0c9';
+        font-weight: 900;
+    }
 }
 
 #toggle-main-nav-button {
@@ -269,56 +249,16 @@
     }
 }
 
+
 #toggle-main-nav {
     position: absolute;
-    opacity: 0; 
+    opacity: 0;
     pointer-events: none;
 }
 
-/*
- * HEADER MAIN NAVIGATION - ANIMATION
- */
-
-.main-nav {
-
-    ul {
-
-        li:nth-child(1) {
-            @extend %nav-animation-right;
-            animation-delay: calc(#{$basic-animation-delay} * 3);
-        }
-
-        li:nth-child(2) {
-            @extend %nav-animation-right;
-            animation-delay: calc(#{$basic-animation-delay} * 2);
-        }
-
-        li:nth-child(3) {
-            @extend %nav-animation-right;
-            animation-delay: calc(#{$basic-animation-delay} * 1);
-        }
-
-        li:nth-child(4) {
-            @extend %nav-animation-right;
-        }
-
-        li:nth-child(6) {
-            @extend %nav-animation-left;
-        }
-        
-        li:nth-child(7) {
-            @extend %nav-animation-left;
-            animation-delay: calc(#{$basic-animation-delay} * 1);
-        }
-        
-        li:nth-child(8) {
-            @extend %nav-animation-left;
-            animation-delay: calc(#{$basic-animation-delay} * 3);
-        }
-        
-        li:nth-child(9) {
-            @extend %nav-animation-left;
-            animation-delay: calc(#{$basic-animation-delay} * 4);
-        }
-    }
+#theme-gl-toggle{
+    position: absolute;
+    top:50%;
+    opacity: 0;
+    pointer-events: none;
 }

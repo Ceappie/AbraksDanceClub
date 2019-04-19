@@ -1,6 +1,6 @@
 <div class="mobile-main-nav">
-    <label id="toggle-main-nav-button" for="toggle-main-nav"><i class="fa fa-bars"></i></label>
-    <span class="home-btn"><a href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/images/logo.png" alt=""></a></span>
+    <label id="toggle-main-nav-button" for="toggle-main-nav"><div class="bars"></div></label>
+    <span class="home-btn"><a href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/images/logo.png"></a></span>
 </div>
 <nav class="main-nav">
     <ul>
@@ -34,28 +34,28 @@
                     </a>
                 </li>
             </ul>
-            {% elsif item.url == '/dance-halls/' %}
+            {% elsif item.url == '/dance-halls/dance-halls/' %}
             <ul class="child-page">
                 <li>
-                    <a href="{{ site.baseurl }}/dh-dupnica.html">
+                    <a href="{{ site.baseurl }}/dance-halls/dh-dupnica.html">
                         <span class="title">Дупница</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ site.baseurl }}/dh-djerman.html">
+                    <a href="{{ site.baseurl }}/dance-halls/dh-djerman.html">
                         <span class="title">Джерман</span>
                     </a>
                 </li>
             </ul>
-            {% elsif item.url == '/gallery/' %}
+            {% elsif item.url == '/gallery/gallery/' %}
             <ul class="child-page">
                 <li>
-                    <a href="{{ site.baseurl }}/gallery-hora.html">
+                    <a href="{{ site.baseurl }}/gallery/gallery-hora.html">
                         <span class="title">Български танци</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ site.baseurl }}/gallery-salsa.html">
+                    <a href="{{ site.baseurl }}/gallery/gallery-salsa.html">
                         <span class="title">Салса</span>
                     </a>
                 </li>
@@ -66,5 +66,3 @@
         {% endfor %}
     </ul>
 </nav>
-
-<!-- {% if page.url == item.url %} class="current-page"{% endif %} -->

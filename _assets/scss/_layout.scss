@@ -1,5 +1,4 @@
 body {
-    // background: #CCC;
     max-width: 1900px;
 }
 
@@ -32,4 +31,68 @@ article {
 
 .site-content {
     min-height: 100vh;
+}
+
+/*
+ * BACKGROUNDS GREEN
+ */
+
+ .site-footer {
+    background-image: linear-gradient(to right top, #79f149, #60c936, #49a324, #327f12, #1b5c01);
+}
+
+.navigation {
+    background: green;
+}
+
+.about-wrapper {
+    background-image: linear-gradient(to right top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+}
+
+.achievments-wrapper {
+    background-image: linear-gradient(to left, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+}
+
+.contacts-wrapper {
+    background-image: linear-gradient(to right top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c); 
+}
+
+.dh-dupnica-wrapper {
+    background-image: linear-gradient(to bottom, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+}
+
+.dh-djerman-wrapper {
+    background-image: linear-gradient(to bottom right, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+}
+
+.gallery-salsa-wrapper {
+    background-image: linear-gradient(to left top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+}
+
+.gallery-hora-wrapper {
+    background-image: linear-gradient(to left bottom, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+}
+
+.gr-kids-wrapper {
+    background-image: linear-gradient(to bottom right, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+}
+
+.gr-beginners-wrapper {
+    background-image: linear-gradient(to top right, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+}
+
+.gr-advanced-wrapper {
+    background-image: linear-gradient(to top left, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+}
+
+.gr-ensemble-wrapper {
+    background-image: radial-gradient(circle, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+}
+
+.home-festival-wrapper {
+    background-image: linear-gradient(to bottom, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+}
+
+.table-wrapper {
+    background-image: linear-gradient(to right bottom, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
 }

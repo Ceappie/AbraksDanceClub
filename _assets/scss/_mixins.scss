@@ -20,3 +20,9 @@ $responsives: (
           + "Available responsives are: #{map-keys($responsives)}.";
     }
 }
+
+$theme-map: (
+  about-wrapper: linear-gradient(to right top, #f90211, #e80214, #d80316, #c70517, #b70718),
+  achievments-wrapper: linear-gradient(to left, #f90211, #e80214, #d80316, #c70517, #b70718),
+);
+
