@@ -199,6 +199,7 @@ button,
 input[type="submit"],
 .button {
   display: inline-block;
+  font-weight: bold;
   padding: 0.5em 1em;
   background: #73E744;
   color: #000;
@@ -294,6 +295,9 @@ article {
 
 .table-wrapper {
   background-image: linear-gradient(to right bottom, #11430e, #16500f, #1d5d0f, #246b0e, #2c790b); }
+
+.error-wrapper {
+  background-image: radial-gradient(ellipse at top, #11430e, #16500f, #1d5d0f, #246b0e, #2c790b); }
 
 .header {
   background: #FFF; }
@@ -444,12 +448,13 @@ article {
     .main-nav > ul ul {
       display: block;
       position: absolute;
-      background: rgba(13, 56, 11, 0.8);
+      background: #0d380b;
       z-index: 100;
       pointer-events: none;
       border-bottom-left-radius: 0.3em;
       border-bottom-right-radius: 0.3em;
-      overflow: hidden; }
+      overflow: hidden;
+      z-index: 100; }
     .main-nav > ul ul li {
       padding: 1em 2.5em 1em 1rem;
       margin-right: 1rem; }
@@ -458,7 +463,8 @@ article {
     .main-nav > ul > li:hover > ul {
       -webkit-transform: translateX(-1rem);
               transform: translateX(-1rem);
-      opacity: 1; } }
+      opacity: 1;
+      z-index: 100; } }
   @media (max-width: 990px) {
     .main-nav {
       width: 100%; }
@@ -670,7 +676,8 @@ table {
   position: relative;
   background: url("/AbraksDanceClub/images/home.jpg") no-repeat center center;
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  z-index: -1; }
   .main-page-wrapper header {
     display: flex;
     flex-direction: column;
@@ -720,7 +727,8 @@ table {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-flow: row dense;
-  gap: 2rem; }
+  gap: 2rem;
+  z-index: -1; }
   .gallery-hora div,
   .gallery-salsa div {
     position: relative; }
@@ -802,6 +810,9 @@ table {
       @media (max-width: 700px) {
         .gr section p {
           margin: 0; } }
+    .gr section .button {
+      padding: 1.5rem 3rem;
+      font-size: 1.2em; }
 
 .achievments-wrapper .cup-list {
   display: flex;
@@ -915,7 +926,7 @@ table {
     font-size: 1.2em;
     padding-bottom: 2rem; }
   .about-wrapper section img {
-    width: 60%;
+    width: 40%;
     height: auto; }
 
 .home-festival-wrapper section {
@@ -942,3 +953,8 @@ table {
     font-size: 1.2em; }
     .home-festival-wrapper section p:nth-of-type(1) {
       padding-top: 2rem; }
+
+.error-wrapper {
+  text-align: center; }
+  .error-wrapper h3 {
+    line-height: 1.5; }

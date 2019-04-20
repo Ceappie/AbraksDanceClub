@@ -98,3 +98,7 @@ article {
 .table-wrapper {
     background-image: linear-gradient(to right bottom, #{$wrappers-bg});
 }
+
+.error-wrapper {
+    background-image: radial-gradient(ellipse at top, #{$wrappers-bg});
+}
