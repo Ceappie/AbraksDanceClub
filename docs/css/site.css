@@ -185,7 +185,7 @@ h6 {
 
 .ampersand {
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: #000; }
 
 li {
@@ -368,7 +368,7 @@ article {
         color: yellow; }
       @media (max-width: 700px) {
         .header-top-menu ul li {
-          font-size: 1.2em; } }
+          font-size: 1.3em; } }
   .header-top-menu .search {
     display: flex;
     padding-left: 2rem; }
@@ -438,7 +438,7 @@ article {
           opacity: 0.5; } }
     @media (max-width: 700px) {
       .main-nav > ul {
-        font-size: 1.2em; } }
+        font-size: 1.3em; } }
   @media (min-width: 991px) {
     .main-nav > ul > li > ul {
       opacity: 0;
@@ -533,7 +533,7 @@ p.submit {
 legend {
   padding: 0 0.5em;
   font-weight: bold;
-  font-style: 1.2em; }
+  font-style: 1.3em; }
 
 select,
 input {
@@ -777,7 +777,7 @@ table {
       text-align: center; } }
   .dh-djerman-wrapper section p,
   .dh-dupnica-wrapper section p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     padding: 0 0.5rem 3rem 0; }
     .dh-djerman-wrapper section p:nth-of-type(1),
     .dh-dupnica-wrapper section p:nth-of-type(1) {
@@ -806,13 +806,13 @@ table {
     .gr section p {
       margin: 0 8rem;
       padding-bottom: 8em;
-      font-size: 1.2em; }
+      font-size: 1.3em; }
       @media (max-width: 700px) {
         .gr section p {
           margin: 0; } }
     .gr section .button {
       padding: 1.5rem 3rem;
-      font-size: 1.2em; }
+      font-size: 1.3em; }
 
 .achievments-wrapper .cup-list {
   display: flex;
@@ -846,7 +846,7 @@ table {
         z-index: 5; }
     .achievments-wrapper .cup-list li p {
       border: 2px solid #777;
-      font-size: 1.2em;
+      font-size: 1.3em;
       text-shadow: 1px 1px 3px #000;
       box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.75);
       border-radius: 0.3em;
@@ -909,7 +909,7 @@ table {
     padding: 0.4rem 2rem; }
   @media (max-width: 990px) {
     .contacts-wrapper section {
-      font-size: 1.2em;
+      font-size: 1.3em;
       grid-template-columns: repeat(1, 1fr);
       grid-template-areas: "adr" "tel" "evp" "fac" "msg" "map"; }
       .contacts-wrapper section p.telephone {
@@ -924,9 +924,11 @@ table {
           margin: 0; }
         .contacts-wrapper section .message input {
           width: 90%;
-          padding: 1rem; }
+          padding: 0.8rem; }
         .contacts-wrapper section .message textarea {
           width: 90%; }
+        .contacts-wrapper section .message button {
+          padding: 1.5rem 2rem; }
       .contacts-wrapper section iframe {
         width: 300px;
         height: 300px; } }
@@ -935,11 +937,16 @@ table {
   text-align: center; }
   .about-wrapper section p {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.3em;
     padding-bottom: 2rem; }
   .about-wrapper section img {
     width: 40%;
     height: auto; }
+    @media (max-width: 700px) {
+      .about-wrapper section img {
+        width: 80%;
+        float: none;
+        margin-bottom: 1rem; } }
 
 .home-festival-wrapper section {
   margin-right: 1rem;
@@ -962,7 +969,7 @@ table {
         margin-bottom: 1rem; } }
   .home-festival-wrapper section p {
     padding-bottom: 2rem;
-    font-size: 1.2em; }
+    font-size: 1.3em; }
     .home-festival-wrapper section p:nth-of-type(1) {
       padding-top: 2rem; }
 
