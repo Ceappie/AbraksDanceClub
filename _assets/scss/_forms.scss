@@ -22,7 +22,7 @@ p.submit {
 legend {
     padding: 0 0.5em;
     font-weight: bold;
-    font-style: 1.2em;
+    font-style: $base-fz-zoom;
 }
 
 select,
@@ -52,7 +52,7 @@ input[type="submit"] {
     padding: 0.5em 1em;
     border-radius: 0.3em;
     background: #369;
-    color: #FFF;
+    color: $base-text-color;
     border-color: #258;
     cursor: pointer;
 }

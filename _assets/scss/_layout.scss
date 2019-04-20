@@ -1,5 +1,6 @@
 body {
     max-width: 1900px;
+    color: $base-text-color;
 }
 
 article {
@@ -46,53 +47,53 @@ article {
 }
 
 .about-wrapper {
-    background-image: linear-gradient(to right top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+    background-image: linear-gradient(to right top, #{$wrappers-bg});
 }
 
 .achievments-wrapper {
-    background-image: linear-gradient(to left, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+    background-image: linear-gradient(to left, #{$wrappers-bg});
 }
 
 .contacts-wrapper {
-    background-image: linear-gradient(to right top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c); 
+    background-image: linear-gradient(to right top, #{$wrappers-bg}); 
 }
 
 .dh-dupnica-wrapper {
-    background-image: linear-gradient(to bottom, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+    background-image: linear-gradient(to bottom, #{$wrappers-bg});
 }
 
 .dh-djerman-wrapper {
-    background-image: linear-gradient(to bottom right, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+    background-image: linear-gradient(to bottom right, #{$wrappers-bg});
 }
 
 .gallery-salsa-wrapper {
-    background-image: linear-gradient(to left top, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+    background-image: linear-gradient(to left top, #{$wrappers-bg});
 }
 
 .gallery-hora-wrapper {
-    background-image: linear-gradient(to left bottom, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+    background-image: linear-gradient(to left bottom, #{$wrappers-bg});
 }
 
 .gr-kids-wrapper {
-    background-image: linear-gradient(to bottom right, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+    background-image: linear-gradient(to bottom right, #{$wrappers-bg});
 }
 
 .gr-beginners-wrapper {
-    background-image: linear-gradient(to top right, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+    background-image: linear-gradient(to top right, #{$wrappers-bg});
 }
 
 .gr-advanced-wrapper {
-    background-image: linear-gradient(to top left, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+    background-image: linear-gradient(to top left, #{$wrappers-bg});
 }
 
 .gr-ensemble-wrapper {
-    background-image: radial-gradient(circle, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+    background-image: radial-gradient(circle, #{$wrappers-bg});
 }
 
 .home-festival-wrapper {
-    background-image: linear-gradient(to bottom, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+    background-image: linear-gradient(to bottom, #{$wrappers-bg});
 }
 
 .table-wrapper {
-    background-image: linear-gradient(to right bottom, #09b263, #00bd59, #08c84c, #1fd33a, #35dd1c);
+    background-image: linear-gradient(to right bottom, #{$wrappers-bg});
 }

@@ -1,5 +1,6 @@
 .table-wrapper {
     width: 100%;
+    color: #000;
 }
 
 table {
@@ -81,10 +82,10 @@ table {
         background: rgba(0, 0,  0, 0.3);
         border-radius: 0.3em;
         padding: 1rem;
-        text-shadow: 1px 1px 5px #000;
+        text-shadow: $base-text-shadow;
 
         li {
-            color: #FFF;
+            color: $base-text-color;
             padding-bottom: 1rem;
 
             span {
@@ -98,22 +99,10 @@ table {
     }
 
     .day > ul > li:nth-child(1) {
-        padding-top: 0.5rem;
+        padding-top: 1rem;
 
-        span {
+        span::before {
             border-bottom: 2px solid yellow;
         }
-    }
-
-    .day > ul > li:nth-child(2) span {
-        border-bottom: 2px solid lime;
-    }
-
-    .day > ul > li:nth-child(3) span {
-        border-bottom: 2px solid rgb(252, 66, 34);
-    }
-
-    .day > ul > li:nth-child(4) span {
-        border-bottom: 2px solid aqua;
     }
 }

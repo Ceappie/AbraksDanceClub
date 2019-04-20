@@ -11,7 +11,7 @@
     justify-content: space-between;
     background-image: linear-gradient(to right top, #79f149, #60c936, #49a324, #327f12, #1b5c01);
     padding: 0.5rem 1rem;
-    text-shadow: 1px 1px 5px #000;
+    text-shadow: $base-text-shadow;
 
     i {
         color: $base-text-color;
@@ -51,6 +51,10 @@
             a:hover {
                 color: yellow;
             }
+
+            @include rp('mobile') {
+                font-size: $base-fz-zoom;
+            }
         }
     }
 
@@ -68,19 +72,12 @@
         font-family: "Font Awesome 5 Free";
         content: '\f002';
         font-weight: 900;
-        color: #FFF;
+        color: $base-text-color;
         padding-right: 0.4rem;
     }
 }
 
 @media (max-width: 1120px) {
-    .header-top-menu ul li a span {
-        display: none;
-    }
-}
-
-@include rp('tablet') {
-
     .header-top-menu ul li a span {
         display: none;
     }
@@ -92,7 +89,7 @@
 
 .main-nav {
     margin: auto;
-    text-shadow: 1px 1px 5px #000;
+    text-shadow: $base-text-shadow;
 
 
 
@@ -109,10 +106,6 @@
                 padding-left: 2rem;
                 text-align: left;
                 align-items: flex-start;
-
-                @include rp('mobile') {
-                    font-size: 1.2em;
-                }
             }
 
             .main-nav > ul > li{
@@ -143,7 +136,7 @@
 
             a{
                 font-size: 1.3em;
-                color: #FFF;
+                color: $base-text-color;
             }
         }
 
@@ -162,8 +155,18 @@
                 font-family: "Font Awesome 5 Free";
                 content: '\f078';
                 font-weight: 900;
-                color: #FFF;
+                color: $base-text-color;
             }
+
+            @include rp('mobile') {
+                & > a > span{
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        @include rp('mobile') {
+            font-size: $base-fz-zoom;
         }
     }
 
@@ -178,7 +181,7 @@
         & > ul ul {
             display: block;
             position: absolute;
-            background: rgba(0, 128, 0, 0.8);
+            background: rgba(13, 56, 11, 0.6);
             z-index: 100;
             pointer-events: none;
             border-bottom-left-radius: 0.3em;
@@ -235,7 +238,7 @@
 
 #toggle-main-nav-button {
     font-size: 200%;
-    color: #FFF;
+    color: $base-text-color;
     padding: 0.5rem;
 }
 

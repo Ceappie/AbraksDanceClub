@@ -8,35 +8,55 @@
         li {
             flex: 0 1 30%;
             text-align: center;
-            margin: 2rem 1rem;
+            margin: 0 1rem 2rem 0;
 
             @include rp('mobile') {
                 flex-basis: 80%;
             }
-        }
 
-        img {
-            width: 75%;
-            height: auto;
-        }
+            &::nth-child(1) {
+                margin-top: 0;
+            }
+        
+            .img-wrapper {
+                position: relative;
+                // overflow: hidden;
 
-        img:hover {
-            transform: scale(1.3);
-            z-index: 5;
-        }
+                &::after {
+                    display: block;
+                    content: '';
+                    padding-top: 59%;
+                }
 
-        p {
-            border: 2px solid #777;
-            font-size: 1.2em;
-            text-shadow: 1px 1px 3px #000;
-            box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
-            border-radius: 0.3em;
-            padding: 0.2rem;
-            margin: 0.7rem 0;
-        }
+                img {
+                    display: block;
+                    position: absolute;
+                    left: 10%;
+                    right: 0;
+                    width: 75%;
+                    height: auto;
+                }
+    
+                img:hover {
+                    transform: scale(1.3);
+                    z-index: 5;
+                }
 
-        p:nth-child(1) {
-            margin-bottom: 1rem;
+            }
+
+            p {
+                border: 2px solid #777;
+                font-size: $base-fz-zoom;
+                text-shadow: 1px 1px 3px #000;
+                box-shadow: $base-box-shadow;
+                border-radius: 0.3em;
+                padding: 0.2rem;
+                margin: 0.7rem 0;
+            }
+
+            p:nth-child(1) {
+                margin-bottom: 1rem;
+            }
         }
     }
 }
