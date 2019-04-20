@@ -404,6 +404,8 @@ article {
           padding-left: 2rem;
           text-align: left;
           align-items: flex-start; }
+        .main-nav > ul li:last-of-type {
+          padding-bottom: 1rem; }
         .main-nav > ul .main-nav > ul > li {
           text-align: center; }
         .main-nav > ul .li-logo {
@@ -648,8 +650,9 @@ table {
   .schedule-mobile {
     display: inline-block;
     text-align: center;
+    font-size: 1.3em;
     background: rgba(0, 0, 0, 0.3);
-    border-radius: 0.3em;
+    border-radius: 0.5em;
     padding: 1rem;
     text-shadow: 1px 1px 5px #000; }
     .schedule-mobile li {

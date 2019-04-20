@@ -107,6 +107,10 @@
                 align-items: flex-start;
             }
 
+            li:last-of-type {
+                padding-bottom: 1rem;
+            }
+
             .main-nav > ul > li{
                 text-align: center;
             }

@@ -70,17 +70,18 @@ table {
 
 @include rp('tablet') {
     .schedule-laptop { display: none; }
-
+    
     .table-wrapper {
         display: flex;
         flex-direction: column;
     }
-
+    
     .schedule-mobile {
         display: inline-block;
         text-align: center;
+        font-size: $base-fz-zoom;
         background: rgba(0, 0,  0, 0.3);
-        border-radius: 0.3em;
+        border-radius: 0.5em;
         padding: 1rem;
         text-shadow: $base-text-shadow;
 
