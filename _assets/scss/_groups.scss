@@ -1,0 +1,19 @@
+.gr {
+    text-align: center;
+
+    section {
+        margin-right: 1rem;
+        overflow: hidden;
+
+        p {
+            margin: 0 8rem;
+            padding-bottom: 8em;
+            font-size: $base-fz-zoom;
+
+            @include rp ('mobile') {
+                margin: 0;
+            }
+            
+        }
+    }
+}

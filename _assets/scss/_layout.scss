@@ -38,12 +38,13 @@ article {
  * BACKGROUNDS GREEN
  */
 
- .site-footer {
-    background-image: linear-gradient(to right top, #79f149, #60c936, #49a324, #327f12, #1b5c01);
+.header-top-menu,
+.site-footer {
+    background-image: linear-gradient(to left top, #79f149, #60c936, #49a324, #327f12, #1b5c01);
 }
 
 .navigation {
-    background: green;
+    background: #0D380B;
 }
 
 .about-wrapper {

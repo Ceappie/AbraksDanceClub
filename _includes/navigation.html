@@ -12,54 +12,17 @@
             <span class="title">{{ item.title }}</span>
             </a>
             {% if item.url == '/groups/groups/' %}
-            <ul class="child-page">
-                <li>
-                    <a href="{{ site.baseurl }}/groups/kids.html">
-                        <span class="title">Деца 5г.-14г.</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ site.baseurl }}/groups/beginners.html">
-                        <span class="title">Начинаещи</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ site.baseurl }}/groups/advanced.html">
-                        <span class="title">Напреднали</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ site.baseurl }}/groups/ensemble.html">
-                        <span class="title">Ансамбъл</span>
-                    </a>
-                </li>
-            </ul>
+            
+            {% include groups-nav-extended.html %}
+
             {% elsif item.url == '/dance-halls/dance-halls/' %}
-            <ul class="child-page">
-                <li>
-                    <a href="{{ site.baseurl }}/dance-halls/dh-dupnica.html">
-                        <span class="title">Дупница</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ site.baseurl }}/dance-halls/dh-djerman.html">
-                        <span class="title">Джерман</span>
-                    </a>
-                </li>
-            </ul>
+            
+            {% include dh-nav-extended.html %}
+
             {% elsif item.url == '/gallery/gallery/' %}
-            <ul class="child-page">
-                <li>
-                    <a href="{{ site.baseurl }}/gallery/gallery-hora.html">
-                        <span class="title">Български танци</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ site.baseurl }}/gallery/gallery-salsa.html">
-                        <span class="title">Салса</span>
-                    </a>
-                </li>
-            </ul>
+            
+            {% include gallery-nav-extended.html %}
+
             {% endif %}
         </li>
         {% endif %}

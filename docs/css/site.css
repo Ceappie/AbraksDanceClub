@@ -1,4 +1,5 @@
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext,latin-ext");
 @import url("https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&subset=cyrillic,cyrillic-ext,latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Philosopher:400,400i,700,700i&subset=cyrillic,cyrillic-ext");
 .main-nav ul li:nth-child(6), .main-nav ul li:nth-child(7), .main-nav ul li:nth-child(8), .main-nav ul li:nth-child(9), .main-nav ul li:nth-child(1), .main-nav ul li:nth-child(2), .main-nav ul li:nth-child(3), .main-nav ul li:nth-child(4), .header-top-menu ul li:nth-child(1), .header-top-menu ul li:nth-child(2), .header-top-menu ul li:nth-child(3), .header-top-menu ul li:nth-child(4), .header-top-menu ul .search {
@@ -139,7 +140,7 @@ html {
 html {
   font-size: 12px;
   line-height: 1.5;
-  font-family: "PT Serif", Georgia, Tahoma, serif; }
+  font-family: 'Open Sans', sans-serif; }
 
 @media (min-width: 600px) {
   html {
@@ -148,14 +149,6 @@ html {
 @media (min-width: 1260px) {
   html {
     font-size: 16px; } }
-
-@media (min-width: 1420px) {
-  html {
-    font-size: 18px; } }
-
-@media (min-width: 1660px) {
-  html {
-    font-size: 20px; } }
 
 p {
   padding-bottom: 1em; }
@@ -207,8 +200,8 @@ input[type="submit"],
 .button {
   display: inline-block;
   padding: 0.5em 1em;
-  background: #369;
-  color: #FFFFFF;
+  background: #73E744;
+  color: #000;
   border: none;
   text-decoration: none;
   border-radius: 0.3em; }
@@ -256,11 +249,12 @@ article {
 /*
  * BACKGROUNDS GREEN
  */
+.header-top-menu,
 .site-footer {
-  background-image: linear-gradient(to right top, #79f149, #60c936, #49a324, #327f12, #1b5c01); }
+  background-image: linear-gradient(to left top, #79f149, #60c936, #49a324, #327f12, #1b5c01); }
 
 .navigation {
-  background: green; }
+  background: #0D380B; }
 
 .about-wrapper {
   background-image: linear-gradient(to right top, #11430e, #16500f, #1d5d0f, #246b0e, #2c790b); }
@@ -306,7 +300,6 @@ article {
 
 .navigation {
   display: flex;
-  background: #0D380B;
   width: 100%;
   margin: 0 auto;
   justify-content: space-between;
@@ -342,7 +335,6 @@ article {
   width: 100%;
   margin: 0 auto;
   justify-content: space-between;
-  background-image: linear-gradient(to right top, #79f149, #60c936, #49a324, #327f12, #1b5c01);
   padding: 0.5rem 1rem;
   text-shadow: 1px 1px 5px #000; }
   .header-top-menu i {
@@ -452,7 +444,7 @@ article {
     .main-nav > ul ul {
       display: block;
       position: absolute;
-      background: rgba(13, 56, 11, 0.6);
+      background: rgba(13, 56, 11, 0.8);
       z-index: 100;
       pointer-events: none;
       border-bottom-left-radius: 0.3em;
@@ -675,7 +667,8 @@ table {
   box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.75); }
 
 .main-page-wrapper {
-  background: url("/AbraksDanceClub/images/home.jpg") no-repeat center center;
+  position: relative;
+  background: url("/images/home.jpg") no-repeat center center;
   background-position: center;
   background-size: cover; }
   .main-page-wrapper header {
@@ -711,9 +704,13 @@ table {
       text-shadow: 3px 6px 5px #000; }
     .main-page-wrapper section p:nth-child(6) {
       padding-bottom: 0; }
-  .main-page-wrapper:after {
-    display: block;
-    content: ''; }
+  .main-page-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
 
 /*
  * SALSA
@@ -774,6 +771,9 @@ table {
   .dh-dupnica-wrapper section p {
     font-size: 1.2em;
     padding: 0 0.5rem 3rem 0; }
+    .dh-djerman-wrapper section p:nth-of-type(1),
+    .dh-dupnica-wrapper section p:nth-of-type(1) {
+      padding-top: 2rem; }
   .dh-djerman-wrapper section img,
   .dh-dupnica-wrapper section img {
     width: 30%;
@@ -789,6 +789,19 @@ table {
         width: 80%;
         float: none;
         margin-bottom: 1rem; } }
+
+.gr {
+  text-align: center; }
+  .gr section {
+    margin-right: 1rem;
+    overflow: hidden; }
+    .gr section p {
+      margin: 0 8rem;
+      padding-bottom: 8em;
+      font-size: 1.2em; }
+      @media (max-width: 700px) {
+        .gr section p {
+          margin: 0; } }
 
 .achievments-wrapper .cup-list {
   display: flex;
@@ -905,27 +918,27 @@ table {
     width: 60%;
     height: auto; }
 
-.home-festival-wrapper {
-  min-height: 100vh; }
-  .home-festival-wrapper section {
-    margin-right: 1rem;
-    overflow: hidden; }
+.home-festival-wrapper section {
+  margin-right: 1rem;
+  overflow: hidden; }
+  @media (max-width: 700px) {
+    .home-festival-wrapper section {
+      text-align: center; } }
+  .home-festival-wrapper section img {
+    width: 30%;
+    height: auto;
+    float: right;
+    clear: both;
+    border-radius: 0.3em;
+    box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.75);
+    margin: 1rem; }
     @media (max-width: 700px) {
-      .home-festival-wrapper section {
-        text-align: center; } }
-    .home-festival-wrapper section img {
-      width: 30%;
-      height: auto;
-      float: right;
-      clear: both;
-      border-radius: 0.3em;
-      box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.75);
-      margin: 2rem; }
-      @media (max-width: 700px) {
-        .home-festival-wrapper section img {
-          width: 80%;
-          float: none;
-          margin-bottom: 1rem; } }
-    .home-festival-wrapper section p {
-      padding-bottom: 2rem;
-      font-size: 1.2em; }
+      .home-festival-wrapper section img {
+        width: 80%;
+        float: none;
+        margin-bottom: 1rem; } }
+  .home-festival-wrapper section p {
+    padding-bottom: 2rem;
+    font-size: 1.2em; }
+    .home-festival-wrapper section p:nth-of-type(1) {
+      padding-top: 2rem; }

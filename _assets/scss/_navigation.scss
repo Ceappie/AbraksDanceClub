@@ -9,7 +9,6 @@
     width: 100%;
     margin: 0 auto;
     justify-content: space-between;
-    background-image: linear-gradient(to right top, #79f149, #60c936, #49a324, #327f12, #1b5c01);
     padding: 0.5rem 1rem;
     text-shadow: $base-text-shadow;
 
@@ -181,7 +180,7 @@
         & > ul ul {
             display: block;
             position: absolute;
-            background: rgba(13, 56, 11, 0.6);
+            background: rgba(13, 56, 11, 0.8);
             z-index: 100;
             pointer-events: none;
             border-bottom-left-radius: 0.3em;
