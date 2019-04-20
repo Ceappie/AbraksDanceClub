@@ -399,13 +399,12 @@ article {
     @media (max-width: 990px) {
       .main-nav > ul {
         flex-direction: column;
-        align-items: flex-start; }
+        align-items: flex-start;
+        padding-bottom: 1rem; }
         .main-nav > ul li {
-          padding-left: 2rem;
+          padding-left: 2.5rem;
           text-align: left;
           align-items: flex-start; }
-        .main-nav > ul li:last-of-type {
-          padding-bottom: 1rem; }
         .main-nav > ul .main-nav > ul > li {
           text-align: center; }
         .main-nav > ul .li-logo {
@@ -916,9 +915,9 @@ table {
       grid-template-columns: repeat(1, 1fr);
       grid-template-areas: "adr" "tel" "evp" "fac" "msg" "map"; }
       .contacts-wrapper section p.telephone {
-        padding-bottom: 0.5rem; }
+        padding-bottom: 1.3rem; }
       .contacts-wrapper section .message {
-        padding: 1rem; }
+        padding: 2rem 0; }
         .contacts-wrapper section .message h2 {
           text-align-last: left;
           width: 100%;

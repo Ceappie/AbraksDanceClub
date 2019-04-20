@@ -100,15 +100,12 @@
         @include rp('tablet') {
             flex-direction: column;
             align-items: flex-start;
+            padding-bottom: 1rem;
 
             li {
-                padding-left: 2rem;
+                padding-left: 2.5rem;
                 text-align: left;
                 align-items: flex-start;
-            }
-
-            li:last-of-type {
-                padding-bottom: 1rem;
             }
 
             .main-nav > ul > li{
