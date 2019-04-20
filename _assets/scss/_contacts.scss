@@ -98,6 +98,7 @@
         }
 
         @include rp('tablet') {
+            font-size: $base-fz-zoom;
             grid-template-columns: repeat(1, 1fr);
             grid-template-areas: 
             "adr"
@@ -113,6 +114,22 @@
 
             .message {
                 padding: 1rem;
+
+                h2 {
+                    text-align-last: left;
+                    width: 100%;
+                    font-size: 18px;
+                    padding: 0 0 1rem 0;
+                    margin: 0;
+                }
+
+                input {
+                    width: 90%;
+                }
+
+                textarea {
+                    width: 90%;
+                }
             }
 
             iframe {
